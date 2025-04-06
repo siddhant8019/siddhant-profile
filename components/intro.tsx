@@ -31,7 +31,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://drive.google.com/uc?export=view&id=14JhrBeHjFwaFwOiPvwBvqHzw0ToO9ymv"
+              src="/profile.jpeg"
               alt="Siddhant portrait"
               width="192"
               height="192"

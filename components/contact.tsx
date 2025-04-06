@@ -29,17 +29,15 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeading>Unlock Opportunity: Reach out to me now!</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at{" "}
-        <a
-          className="underline text-gray-800 dark:text-gray-300"
-          href="mailto:example@gmail.com"
-        >
-          example@gmail.com
-        </a>{" "}
-        or through this form.
+        I specialize in building full-stack products that ship fast and scale
+        smart — from crafting clean APIs to integrating LLMs and AI-driven
+        features that actually work in production. Whether you're launching an
+        MVP, leveling up your backend, or embedding intelligence into your app,
+        I’m all in on solving real problems with code that gets the job done.
+        Let’s build something scrappy, smart, and meaningful. 🚀
       </p>
 
       <form

@@ -19,7 +19,7 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>My experience</SectionHeading>
+      <SectionHeading>Guiding Through My Professional Path</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
@@ -80,8 +80,18 @@ export default function Experience() {
                       className="rounded-none"
                     />
                   </div>
+                ) : "viit" in item ? (
+                  <div className="flex items-center justify-center h-full w-full bg-white dark:bg-gray-700 rounded-full">
+                    <Image
+                      src="/viit.png"
+                      alt="VIIT logo"
+                      width={32}
+                      height={32}
+                      className="rounded-none"
+                    />
+                  </div>
                 ) : (
-                  item.icon
+                  item
                 )
               }
               iconStyle={{

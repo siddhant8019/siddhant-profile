@@ -54,18 +54,19 @@ export const experiencesData = [
     title: "MS in Computer Science",
     location: "California State University, Long Beach",
     description:
-      "• Research: Interpretable AI & Decision Tree Models\n• Courses: Algorithms, Distributed Computing, AI/ML\n• Thesis: Rashomon Effect in Decision Tree Ensembles",
+      "• Research: Interpretable AI & Decision Tree Models\n• Courses: Algorithms, Distributed Computing, AI/ML \n • Thesis: Rashomon Effect in Decision Tree Ensembles",
     icon: React.createElement(LuGraduationCap),
     date: "Aug 2023 - May 2025",
     mscs: true,
   },
   {
-    title: "BE in Information Technology",
+    title: "BTech in Information Technology",
     location: "Vishwakarma Institute of Information Technology, India",
     description:
       "• CGPA: 3.25/10\n• Courses: Data Structures, Algorithms, Databases\n• Project: Healthcare Predictive Analytics using ML",
     icon: React.createElement(LuGraduationCap),
     date: "Aug 2019 - May 2023",
+    viit: true,
   },
   {
     title: "Google Cloud Ready Facilitator",

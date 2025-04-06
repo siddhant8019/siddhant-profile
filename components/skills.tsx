@@ -29,7 +29,7 @@ export default function Skills() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My skills</SectionHeading>
+      <SectionHeading>Highlighting My Proficiencies</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
@@ -48,7 +48,7 @@ export default function Skills() {
         ))}
       </ul>
       <p className="text-gray-600 dark:text-gray-400 mt-8 text-sm max-w-[45rem] mx-auto">
-        Along with these core skills, I have extensive experience with various
+        Along with these core skills, I bring extensive experience with various
         ML algorithms (Linear/Logistic Regression, Decision Trees, Random
         Forest, SVMs), AI frameworks (Hugging Face, Keras, spaCy, XGBoost), and
         programming languages (R, C/C++, Java). My expertise also spans LLMs,
