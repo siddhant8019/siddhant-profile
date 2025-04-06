@@ -84,7 +84,7 @@ export const projectsData = [
     description:
       "• Created predictive system with XGBoost/RF -> BAC and HGN detection\n• Engineered custom pipelines for eye movement analysis\n• Implemented MLOps practices reducing operational costs",
     tags: ["Python", "XGBoost", "Random Forest", "ML/MLOps", "Eye Tracking"],
-    imageUrl: "/corcomment.png",
+    imageUrl: "/eye.png",
     width: 1200,
     height: 800,
   },
@@ -99,7 +99,7 @@ export const projectsData = [
       "AI Agents",
       "Knowledge Base",
     ],
-    imageUrl: "/corcomment.png",
+    imageUrl: "/llm.png",
     width: 1200,
     height: 800,
   },

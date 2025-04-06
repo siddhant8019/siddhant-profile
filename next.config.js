@@ -19,6 +19,7 @@ const nextConfig = {
         hostname: "cloud.google.com",
       },
     ],
+    unoptimized: true,
   },
   experimental: {
     serverActions: true,
