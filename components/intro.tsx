@@ -109,7 +109,7 @@ export default function Intro() {
           <br />
           &nbsp;&nbsp;
           <span className="code-comment">
-            // I craft digital solutions that make a difference
+            {/* I craft digital solutions that make a difference */}
           </span>
           <br />
           <span className="code-bracket">{`}`}</span>
