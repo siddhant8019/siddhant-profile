@@ -4,7 +4,19 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
+        hostname: "drive.google.com",
+      },
+      {
+        protocol: "https",
+        hostname: "humancloud.ltd",
+      },
+      {
+        protocol: "https",
+        hostname: "**.csulb.edu",
+      },
+      {
+        protocol: "https",
+        hostname: "cloud.google.com",
       },
     ],
   },

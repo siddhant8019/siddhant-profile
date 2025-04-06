@@ -10,6 +10,8 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import Image from "next/image";
+import { SiGooglecloud } from "react-icons/si";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
@@ -37,7 +39,51 @@ export default function Experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
-              icon={item.icon}
+              icon={
+                "csulb" in item ? (
+                  <div className="flex items-center justify-center h-full w-full bg-white dark:bg-gray-700 rounded-full">
+                    <Image
+                      src="/lb.png"
+                      alt="CSULB logo"
+                      width={32}
+                      height={32}
+                      className="rounded-none"
+                    />
+                  </div>
+                ) : "humancloud" in item ? (
+                  <div className="flex items-center justify-center h-full w-full bg-white dark:bg-gray-700 rounded-full">
+                    <Image
+                      src="https://humancloud.ltd/favicon.ico"
+                      alt="Humancloud favicon"
+                      width={28}
+                      height={28}
+                      className="rounded-sm"
+                    />
+                  </div>
+                ) : "google" in item ? (
+                  <div className="flex items-center justify-center h-full w-full bg-white dark:bg-gray-700 rounded-full">
+                    <Image
+                      src="https://cloud.google.com/favicon.ico"
+                      alt="Google Cloud logo"
+                      width={28}
+                      height={28}
+                      className="rounded-none"
+                    />
+                  </div>
+                ) : "mscs" in item ? (
+                  <div className="flex items-center justify-center h-full w-full bg-white dark:bg-gray-700 rounded-full">
+                    <Image
+                      src="/lb.png"
+                      alt="CSULB MS logo"
+                      width={32}
+                      height={32}
+                      className="rounded-none"
+                    />
+                  </div>
+                ) : (
+                  item.icon
+                )
+              }
               iconStyle={{
                 background:
                   theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",

@@ -16,6 +16,16 @@ export default function Projects() {
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />
+            <div className="flex flex-wrap justify-center gap-2 mb-12 max-w-[42rem] mx-auto">
+              {project.tags.map((tag, tagIndex) => (
+                <span
+                  className="bg-gradient-to-br from-indigo-500 to-indigo-600 dark:from-indigo-400 dark:to-indigo-500 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full shadow-sm"
+                  key={tagIndex}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </React.Fragment>
         ))}
       </div>

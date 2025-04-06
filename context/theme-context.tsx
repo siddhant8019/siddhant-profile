@@ -18,7 +18,8 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
+  const [mounted, setMounted] = useState(false);
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -33,19 +34,31 @@ export default function ThemeContextProvider({
   };
 
   useEffect(() => {
+    setMounted(true);
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
 
     if (localTheme) {
       setTheme(localTheme);
-
-      if (localTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.toggle("dark", localTheme === "dark");
+    } else {
+      // Check system preference if no stored theme
+      const systemPreference = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+      setTheme(systemPreference);
+      window.localStorage.setItem("theme", systemPreference);
+      document.documentElement.classList.toggle(
+        "dark",
+        systemPreference === "dark"
+      );
     }
   }, []);
+
+  // Prevent hydration mismatch by only rendering children after mounted
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <ThemeContext.Provider

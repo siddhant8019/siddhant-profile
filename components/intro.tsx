@@ -31,8 +31,8 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-              alt="Ricardo portrait"
+              src="https://drive.google.com/uc?export=view&id=14JhrBeHjFwaFwOiPvwBvqHzw0ToO9ymv"
+              alt="Siddhant portrait"
               width="192"
               height="192"
               quality="95"
@@ -52,25 +52,84 @@ export default function Intro() {
               duration: 0.7,
             }}
           >
-            👋
+            👨‍💻
           </motion.span>
         </div>
       </div>
 
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">8 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
-      </motion.h1>
+      <div className="bg-white/20 dark:bg-gray-900/30 rounded-lg p-4 mt-6 shadow-sm border border-gray-200 dark:border-gray-800 backdrop-blur-sm max-w-[36rem] mx-auto">
+        <div className="flex items-center mb-2 space-x-2">
+          <div className="h-3 w-3 rounded-full bg-red-500"></div>
+          <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
+          <div className="h-3 w-3 rounded-full bg-green-500"></div>
+          <div className="ml-2 text-xs text-gray-500 dark:text-gray-400 font-code">
+            developer.profile
+          </div>
+        </div>
+
+        <motion.h1
+          className="mb-6 px-4 text-base sm:text-lg !leading-[1.5] code-text text-left"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <span className="code-keyword">const</span>{" "}
+          <span className="code-variable">developer</span>{" "}
+          <span className="code-bracket">=</span>{" "}
+          <span className="code-bracket">{`{`}</span>
+          <br />
+          &nbsp;&nbsp;<span className="code-string">name</span>
+          <span className="code-bracket">:</span>{" "}
+          <span className="code-string">"Siddhant"</span>
+          <span className="code-bracket">,</span>
+          <br />
+          &nbsp;&nbsp;<span className="code-string">role</span>
+          <span className="code-bracket">:</span>{" "}
+          <span className="code-string">"Software Engineer"</span>
+          <span className="code-bracket">,</span>
+          <br />
+          &nbsp;&nbsp;<span className="code-string">skills</span>
+          <span className="code-bracket">:</span>{" "}
+          <span className="code-bracket">[</span>
+          <span className="code-string">"AI"</span>
+          <span className="code-bracket">,</span>
+          <span className="code-string">"Full-Stack"</span>
+          <span className="code-bracket">,</span>
+          <span className="code-string">"Problem Solving"</span>
+          <span className="code-bracket">]</span>
+          <span className="code-bracket">,</span>
+          <br />
+          &nbsp;&nbsp;<span className="code-function">create</span>
+          <span className="code-bracket">:</span>{" "}
+          <span className="code-bracket">(</span>
+          <span className="code-variable">ideas</span>
+          <span className="code-bracket">)</span>{" "}
+          <span className="code-keyword">{"=>"}</span>{" "}
+          <span className="code-string">"innovative systems"</span>
+          <span className="code-bracket">,</span>
+          <br />
+          &nbsp;&nbsp;
+          <span className="code-comment">
+            // I craft digital solutions that make a difference
+          </span>
+          <br />
+          <span className="code-bracket">{`}`}</span>
+          <span className="typing-cursor"></span>
+        </motion.h1>
+
+        <motion.div
+          className="px-4 text-xs sm:text-sm text-left code-text mb-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <span className="code-keyword">export default</span>{" "}
+          <span className="code-function">developer</span>
+          <span className="code-bracket">;</span>
+        </motion.div>
+      </div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-sm font-medium mt-6"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -79,40 +138,47 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-white px-5 py-2 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition code-text dark:bg-gray-800 dark:hover:bg-gray-900"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
+          <span className="code-bracket">function</span>{" "}
+          <span className="code-function">contactMe</span>
+          <span className="code-bracket">()</span>
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
+          className="group bg-white px-5 py-2 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:border-gray-700 dark:hover:border-gray-600 code-text"
+          href="https://drive.google.com/file/d/1M6jT9RCfpJSz-WDrK8qqC5Ji6kzqwui4/view?usp=sharing"
           download
         >
-          Download CV{" "}
+          <span className="code-variable">resume</span>
+          <span className="code-bracket">.</span>
+          <span className="code-function">download</span>
+          <span className="code-bracket">()</span>
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
+        <div className="flex space-x-1">
+          <a
+            className="bg-white p-3 text-gray-700 hover:text-gray-900 flex items-center gap-2 rounded-md focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
+            href="https://linkedin.com/in/siddhantnpatil"
+            target="_blank"
+          >
+            <BsLinkedin />
+          </a>
 
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
+          <a
+            className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-md focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-900 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
+            href="https://github.com/siddhant8019"
+            target="_blank"
+          >
+            <FaGithubSquare />
+          </a>
+        </div>
       </motion.div>
     </section>
   );

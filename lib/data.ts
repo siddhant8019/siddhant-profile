@@ -1,10 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaGoogle } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import { SiGooglecloud } from "react-icons/si";
 
 export const links = [
   {
@@ -35,73 +33,105 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Software Engineer, College of Business (CSULB)",
+    location: "Long Beach, CA",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "• Designed Next.js dashboard visualizing Rashomon effect in decision trees\n• Engineered tools for TimberTrek & TreeFarms to analyze ML models\n• Developed evaluation toolkit reducing analysis time by 35%",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "Jun 2024 - Present",
+    csulb: true,
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Software Engineer, Humancloud Inc.",
+    location: "Remote",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "• Architected digital signature platform using React/Node.js/PostgreSQL\n• Developed Firebase auth system with role-based access controls\n• Led migration to Node.js, cutting infrastructure costs by $10K yearly",
+    icon: React.createElement(FaReact, { className: "text-blue-500" }),
+    date: "Jun 2022 - Jul 2023",
+    humancloud: true,
+  },
+  {
+    title: "MS in Computer Science",
+    location: "California State University, Long Beach",
+    description:
+      "• Research: Interpretable AI & Decision Tree Models\n• Courses: Algorithms, Distributed Computing, AI/ML\n• Thesis: Rashomon Effect in Decision Tree Ensembles",
+    icon: React.createElement(LuGraduationCap),
+    date: "Aug 2023 - May 2025",
+    mscs: true,
+  },
+  {
+    title: "BE in Information Technology",
+    location: "Vishwakarma Institute of Information Technology, India",
+    description:
+      "• CGPA: 3.25/10\n• Courses: Data Structures, Algorithms, Databases\n• Project: Healthcare Predictive Analytics using ML",
+    icon: React.createElement(LuGraduationCap),
+    date: "Aug 2019 - May 2023",
+  },
+  {
+    title: "Google Cloud Ready Facilitator",
+    location: "Remote",
+    description:
+      "• Completed 30+ hands-on labs on ML, data analytics, and app modernization on Google Cloud\n• Guided 2000+ student peers through Google Cloud certification preparation\n• Achieved multiple skill badges in Kubernetes, ML APIs, and Cloud infrastructure",
+    icon: React.createElement(SiGooglecloud, { className: "text-[#4285F4]" }),
+    date: "Feb 2022 - May 2022",
+    google: true,
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Eye-Tracking-Based Alcohol Impairment Detection",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "• Created predictive system with XGBoost/RF -> BAC and HGN detection\n• Engineered custom pipelines for eye movement analysis\n• Implemented MLOps practices reducing operational costs",
+    tags: ["Python", "XGBoost", "Random Forest", "ML/MLOps", "Eye Tracking"],
+    imageUrl: "/corcomment.png",
+    width: 1200,
+    height: 800,
   },
   {
-    title: "rmtDev",
+    title: "LLM Powered Document QA System",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "• Developed cloud-based system for automatic PDF analysis and knowledge extraction\n• Implemented LLM-based architecture for indexing, embedding, and chunking documents\n• Created intelligent QA pipeline with predefined queries and dynamic user questioning",
+    tags: [
+      "Cloud Storage",
+      "Document Analysis",
+      "Embeddings",
+      "AI Agents",
+      "Knowledge Base",
+    ],
+    imageUrl: "/corcomment.png",
+    width: 1200,
+    height: 800,
   },
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
+  // Core Languages
+  "Python",
+  "JavaScript/TypeScript",
+  "SQL",
+
+  // Web Development
   "React",
   "Next.js",
   "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
+
+  // Data & ML
+  "Machine Learning",
+  "Deep Learning/NLP",
+  "TensorFlow/PyTorch",
+  "Data Analysis",
+
+  // Infrastructure
+  "AWS/GCP",
+  "Docker/Kubernetes",
+  "CI/CD",
+
+  // Databases
   "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "MongoDB",
+
+  // Tools
+  "Git/GitHub",
+  "Linux",
 ] as const;
