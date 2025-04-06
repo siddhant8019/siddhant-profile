@@ -57,7 +57,7 @@ export default function Intro() {
         </div>
       </div>
 
-      <div className="bg-white/20 dark:bg-gray-900/30 rounded-lg p-4 mt-6 shadow-sm border border-gray-200 dark:border-gray-800 backdrop-blur-sm max-w-[36rem] mx-auto">
+      <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg p-4 mt-6 shadow-sm border border-gray-200 dark:border-gray-700 backdrop-blur-sm max-w-[36rem] mx-auto">
         <div className="flex items-center mb-2 space-x-2">
           <div className="h-3 w-3 rounded-full bg-red-500"></div>
           <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
@@ -138,7 +138,7 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-white px-5 py-2 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition code-text dark:bg-gray-800 dark:hover:bg-gray-900"
+          className="group z-10 bg-white px-5 py-2 flex items-center gap-2 rounded-md outline-none hover:scale-105 active:scale-100 transition code-text dark:bg-gray-800 dark:hover:bg-gray-900"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -151,7 +151,7 @@ export default function Intro() {
         </Link>
 
         <a
-          className="group bg-white px-5 py-2 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:border-gray-700 dark:hover:border-gray-600 code-text"
+          className="group z-10 bg-white px-5 py-2 flex items-center gap-2 rounded-md outline-none hover:scale-105 active:scale-100 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:border-gray-700 dark:hover:border-gray-600 code-text"
           href="https://drive.google.com/file/d/1M6jT9RCfpJSz-WDrK8qqC5Ji6kzqwui4/view?usp=sharing"
           download
         >
@@ -162,9 +162,9 @@ export default function Intro() {
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
-        <div className="flex space-x-1">
+        <div className="flex space-x-1 sm:ml-2">
           <a
-            className="bg-white p-3 text-gray-700 hover:text-gray-900 flex items-center gap-2 rounded-md focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
+            className="bg-white p-3 text-gray-700 hover:text-gray-900 flex items-center gap-2 rounded-md hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
             href="https://linkedin.com/in/siddhantnpatil"
             target="_blank"
           >
@@ -172,7 +172,7 @@ export default function Intro() {
           </a>
 
           <a
-            className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-md focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-900 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
+            className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-md hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
             href="https://github.com/siddhant8019"
             target="_blank"
           >

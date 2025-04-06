@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -14,6 +14,42 @@ import { FaFlask, FaRobot } from "react-icons/fa";
 
 export default function About() {
   const { ref } = useSectionInView("About");
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const aboutCards = [
+    {
+      icon: (
+        <BsLightningChargeFill className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
+      ),
+      title: "The Engineer's Mindset",
+      description:
+        "With a foundation in Software Engineering and AI/ML, I approach problems analytically, breaking down complex challenges into solvable components. I believe great software is both functional and elegant.",
+    },
+    {
+      icon: (
+        <FaRobot className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
+      ),
+      title: "AI Enthusiast",
+      description:
+        "I'm fascinated by how AI systems can enhance human capabilities. My work focuses on creating intelligent solutions that provide real value, from ML-powered analytics to user-friendly AI interfaces.",
+    },
+    {
+      icon: (
+        <BsTools className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
+      ),
+      title: "Tech Toolkit",
+      description:
+        "My core expertise includes Node.js, FastAPI, PostgreSQL, and AI/ML systems. I specialize in designing fault-tolerant architectures and creating efficient APIs that scale with your business needs.",
+    },
+    {
+      icon: (
+        <BsCloud className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
+      ),
+      title: "Cloud & Infrastructure",
+      description:
+        "Beyond coding, I'm interested in cloud infrastructure and system design. I enjoy creating resilient, scalable architectures that deliver reliable experiences even under challenging conditions.",
+    },
+  ];
 
   return (
     <motion.section
@@ -26,87 +62,43 @@ export default function About() {
     >
       <SectionHeading>My Story</SectionHeading>
 
-      <div className="bg-white/20 dark:bg-gray-900/30 rounded-lg p-5 shadow-sm border border-gray-200 dark:border-gray-800 backdrop-blur-sm mb-6">
+      <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg p-5 shadow-sm border border-gray-200 dark:border-gray-700 backdrop-blur-sm mb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <motion.div
-            className="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700/50"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            <div className="flex items-center mb-4">
-              <BsLightningChargeFill className="text-gray-800 dark:text-gray-200 mr-3 text-xl" />
-              <h3 className="text-lg font-medium">The Engineer's Mindset</h3>
+          {aboutCards.map((card, index) => (
+            <div
+              key={index}
+              className="flip-card h-[200px] relative"
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <div
+                className={`flip-card-side front h-full w-full absolute flex flex-col items-center justify-center p-6 bg-white dark:bg-gray-800/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700/50 transition-all duration-500 ${
+                  hoveredCard === index ? "opacity-0" : "opacity-100"
+                }`}
+              >
+                {card.icon}
+                <h3 className="text-xl font-medium text-center">
+                  {card.title}
+                </h3>
+              </div>
+              <div
+                className={`flip-card-side back h-full w-full absolute flex items-center p-6 bg-white dark:bg-gray-800/50 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700/50 transition-all duration-500 ${
+                  hoveredCard === index ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <div className="relative w-full h-full">
+                  <h3 className="text-xl font-medium text-center absolute top-0 left-0 right-0 text-gray-800 dark:text-gray-200 border-b border-gray-200 dark:border-gray-700 pb-2 mb-3">
+                    {card.title}
+                  </h3>
+                  <div className="pt-12">
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      {card.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
-              With a foundation in{" "}
-              <span className="font-medium">
-                Software Engineering and AI/ML
-              </span>
-              , I approach problems analytically, breaking down complex
-              challenges into solvable components. I believe great software is
-              both functional and elegant.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700/50"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            <div className="flex items-center mb-4">
-              <FaRobot className="text-gray-800 dark:text-gray-200 mr-3 text-xl" />
-              <h3 className="text-lg font-medium">AI Enthusiast</h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
-              I'm fascinated by how{" "}
-              <span className="font-medium">AI systems</span> can enhance human
-              capabilities. My work focuses on creating intelligent solutions
-              that provide real value, from ML-powered analytics to
-              user-friendly AI interfaces.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700/50"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 }}
-          >
-            <div className="flex items-center mb-4">
-              <BsTools className="text-gray-800 dark:text-gray-200 mr-3 text-xl" />
-              <h3 className="text-lg font-medium">Tech Toolkit</h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
-              My core expertise includes{" "}
-              <span className="font-medium">
-                Node.js, FastAPI, PostgreSQL, and AI/ML systems
-              </span>
-              . I specialize in designing fault-tolerant architectures and
-              creating efficient APIs that scale with your business needs.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-white dark:bg-gray-800/50 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700/50"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6 }}
-          >
-            <div className="flex items-center mb-4">
-              <BsCloud className="text-gray-800 dark:text-gray-200 mr-3 text-xl" />
-              <h3 className="text-lg font-medium">Cloud & Infrastructure</h3>
-            </div>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
-              Beyond coding, I'm interested in{" "}
-              <span className="font-medium">
-                cloud infrastructure and system design
-              </span>
-              . I enjoy creating resilient, scalable architectures that deliver
-              reliable experiences even under challenging conditions.
-            </p>
-          </motion.div>
+          ))}
         </div>
 
         <motion.div
@@ -122,6 +114,19 @@ export default function About() {
           </p>
         </motion.div>
       </div>
+
+      <style jsx global>{`
+        .flip-card {
+          perspective: 1000px;
+          cursor: pointer;
+        }
+
+        .flip-card-side {
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          transform: rotateY(0deg);
+        }
+      `}</style>
     </motion.section>
   );
 }
