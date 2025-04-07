@@ -41,17 +41,10 @@ export default function ThemeContextProvider({
       setTheme(localTheme);
       document.documentElement.classList.toggle("dark", localTheme === "dark");
     } else {
-      // Check system preference if no stored theme
-      const systemPreference = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light";
-      setTheme(systemPreference);
-      window.localStorage.setItem("theme", systemPreference);
-      document.documentElement.classList.toggle(
-        "dark",
-        systemPreference === "dark"
-      );
+      // Set dark theme as default
+      setTheme("dark");
+      window.localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
     }
   }, []);
 
