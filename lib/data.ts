@@ -122,6 +122,7 @@ export const skillsData = [
   "Deep Learning/NLP",
   "TensorFlow/PyTorch",
   "Data Analysis",
+  "Microservices",
 
   // Infrastructure
   "AWS/GCP",
