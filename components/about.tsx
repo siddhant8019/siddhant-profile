@@ -4,13 +4,8 @@ import React, { useState } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import {
-  BsLightningChargeFill,
-  BsTools,
-  BsBraces,
-  BsCloud,
-} from "react-icons/bs";
-import { FaFlask, FaRobot } from "react-icons/fa";
+import { BsLightningChargeFill, BsTools, BsBraces } from "react-icons/bs";
+import { FaFlask, FaRobot, FaSearchengin } from "react-icons/fa";
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -43,11 +38,11 @@ export default function About() {
     },
     {
       icon: (
-        <BsCloud className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
+        <FaSearchengin className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
       ),
-      title: "Cloud & Infrastructure",
+      title: "Research & Innovation",
       description:
-        "Beyond coding, I'm interested in cloud infrastructure and system design. I enjoy creating resilient, scalable architectures that deliver reliable experiences even under challenging conditions.",
+        "My academic research in Advanced AI and Computer Vision drives my work. I've applied Random Forest and XGBoost models for anomaly detection, and developed eye-tracking systems achieving 85% accuracy for impairment detection.",
     },
   ];
 
