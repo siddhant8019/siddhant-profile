@@ -18,7 +18,8 @@ const firaCode = Fira_Code({
 
 export const metadata = {
   title: "Siddhant | Personal Portfolio",
-  description: "Siddhant is a full-stack developer with 8 years of experience.",
+  description:
+    "Full Stack guy with a passion for building scalable and efficient systems.",
   icons: {
     icon: "/favicon.ico",
   },
