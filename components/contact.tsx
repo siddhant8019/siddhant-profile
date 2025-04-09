@@ -30,61 +30,126 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Unlock Opportunity: Reach out to me now!</SectionHeading>
+      <SectionHeading>Let's Connect: Send a Message</SectionHeading>
 
-      <p className="text-gray-700 mt-8 dark:text-white/80">
-        I specialize in building full-stack products that ship fast and scale
-        smart — from crafting clean APIs to integrating LLMs and AI-driven
-        features that actually work in production. Whether you're launching an
-        MVP, leveling up your backend, or embedding intelligence into your app,
-        I'm all in on solving real problems with code that gets the job done.
-        Let's build something scrappy, smart, and meaningful. 🚀
-      </p>
-
-      {isSubmitted ? (
-        <div className="mt-10 py-16 flex items-center justify-center rounded-lg border border-gray-200 shadow-sm dark:border-gray-700/30 bg-white dark:bg-gray-100">
-          <p className="text-xl font-medium text-gray-800">
-            Thank you for your message! I'll get back to you soon.
-          </p>
+      <div className="bg-white/80 dark:bg-gray-800/40 rounded-lg p-4 mt-6 shadow-sm border border-gray-200 dark:border-gray-700 backdrop-blur-sm max-w-[36rem] mx-auto">
+        <div className="flex items-center mb-2 space-x-2">
+          <div className="h-3 w-3 rounded-full bg-red-500"></div>
+          <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
+          <div className="h-3 w-3 rounded-full bg-green-500"></div>
+          <div className="ml-2 text-xs text-gray-500 dark:text-gray-400 font-code">
+            contact.form
+          </div>
         </div>
-      ) : (
-        <form
-          className="mt-10 flex flex-col dark:text-black"
-          action={async (formData) => {
-            const { data, error } = await sendEmail(formData);
 
-            if (error) {
-              toast.error(error);
-              return;
-            }
+        {isSubmitted ? (
+          <motion.div
+            className="mt-10 py-8 flex items-center justify-center rounded-lg border border-gray-200 shadow-sm dark:border-gray-700/30 bg-white dark:bg-gray-100"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <div className="text-left code-text">
+              <span className="code-keyword">const</span>{" "}
+              <span className="code-variable">response</span>{" "}
+              <span className="code-bracket">=</span>{" "}
+              <span className="code-bracket">{`{`}</span>
+              <br />
+              &nbsp;&nbsp;<span className="code-string">status</span>
+              <span className="code-bracket">:</span>{" "}
+              <span className="code-string">"success"</span>
+              <span className="code-bracket">,</span>
+              <br />
+              &nbsp;&nbsp;<span className="code-string">message</span>
+              <span className="code-bracket">:</span>{" "}
+              <span className="code-string">
+                "Message received! I'll get back to you soon."
+              </span>
+              <br />
+              <span className="code-bracket">{`}`}</span>
+            </div>
+          </motion.div>
+        ) : (
+          <form
+            className="mt-4 flex flex-col dark:text-black"
+            action={async (formData) => {
+              const { data, error } = await sendEmail(formData);
 
-            toast.success("Email sent successfully!");
-            setIsSubmitted(true);
+              if (error) {
+                toast.error(error);
+                return;
+              }
 
-            // Reset form after 5 seconds
-            setTimeout(() => {
-              setIsSubmitted(false);
-            }, 2000);
-          }}
-        >
-          <input
-            className="h-14 px-4 rounded-lg border border-gray-200 shadow-sm dark:border-gray-700/30 bg-white focus:border-gray-300 outline-none dark:bg-gray-100 dark:focus:bg-gray-50 transition-all"
-            name="senderEmail"
-            type="email"
-            required
-            maxLength={500}
-            placeholder="Your email"
-          />
-          <textarea
-            className="h-52 my-3 rounded-lg border border-gray-200 shadow-sm dark:border-gray-700/30 p-4 bg-white focus:border-gray-300 outline-none dark:bg-gray-100 dark:focus:bg-gray-50 transition-all"
-            name="message"
-            placeholder="Your message"
-            required
-            maxLength={5000}
-          />
-          <SubmitBtn />
-        </form>
-      )}
+              toast.success("Email sent successfully!");
+              setIsSubmitted(true);
+
+              setTimeout(() => {
+                setIsSubmitted(false);
+              }, 5000);
+            }}
+          >
+            <div className="mb-4 text-left code-text">
+              <span className="code-keyword">const</span>{" "}
+              <span className="code-variable">contactForm</span>{" "}
+              <span className="code-bracket">=</span>{" "}
+              <span className="code-bracket">{`{`}</span>
+            </div>
+
+            <div className="mb-4">
+              <div className="text-left code-text mb-2">
+                &nbsp;&nbsp;<span className="code-string">email</span>
+                <span className="code-bracket">:</span>{" "}
+                <span className="code-string">"</span>
+              </div>
+              <input
+                className="w-full h-12 px-4 rounded-lg border border-gray-200 shadow-sm dark:border-gray-700/30 bg-white focus:border-gray-300 outline-none dark:bg-gray-100 dark:focus:bg-gray-50 transition-all code-text"
+                name="senderEmail"
+                type="email"
+                required
+                maxLength={500}
+                placeholder="your.email@example.com"
+              />
+              <div className="text-left code-text mt-1">
+                <span className="code-string">"</span>
+                <span className="code-bracket">,</span>
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <div className="text-left code-text mb-2">
+                &nbsp;&nbsp;<span className="code-string">message</span>
+                <span className="code-bracket">:</span>{" "}
+                <span className="code-string">"</span>
+              </div>
+              <textarea
+                className="w-full h-32 rounded-lg border border-gray-200 shadow-sm dark:border-gray-700/30 p-4 bg-white focus:border-gray-300 outline-none dark:bg-gray-100 dark:focus:bg-gray-50 transition-all code-text"
+                name="message"
+                placeholder="Your message here..."
+                required
+                maxLength={5000}
+              />
+              <div className="text-left code-text mt-1">
+                <span className="code-string">"</span>
+                <span className="code-bracket">,</span>
+              </div>
+            </div>
+
+            <div className="text-left code-text mb-4">
+              <span className="code-bracket">{`}`}</span>
+            </div>
+
+            <div className="text-left code-text mb-4">
+              <span className="code-keyword">await</span>{" "}
+              <span className="code-function">sendMessage</span>
+              <span className="code-bracket">(</span>
+              <span className="code-variable">contactForm</span>
+              <span className="code-bracket">)</span>
+              <span className="code-bracket">;</span>
+            </div>
+
+            <SubmitBtn />
+          </form>
+        )}
+      </div>
     </motion.section>
   );
 }

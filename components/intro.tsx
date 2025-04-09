@@ -113,7 +113,6 @@ export default function Intro() {
           </span>
           <br />
           <span className="code-bracket">{`}`}</span>
-          <span className="typing-cursor"></span>
         </motion.h1>
 
         <motion.div
@@ -136,20 +135,6 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Link
-          href="#contact"
-          className="group z-10 bg-white px-5 py-2 flex items-center gap-2 rounded-md outline-none hover:scale-105 active:scale-100 transition code-text dark:bg-gray-800 dark:hover:bg-gray-900"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          <span className="code-bracket">function</span>{" "}
-          <span className="code-function">contactMe</span>
-          <span className="code-bracket">()</span>
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
-
         <a
           className="group z-10 bg-white px-5 py-2 flex items-center gap-2 rounded-md outline-none hover:scale-105 active:scale-100 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:border-gray-700 dark:hover:border-gray-600 code-text"
           href="https://drive.google.com/file/d/1M6jT9RCfpJSz-WDrK8qqC5Ji6kzqwui4/view?usp=sharing"
