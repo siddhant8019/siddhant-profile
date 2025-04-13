@@ -19,7 +19,7 @@ export default function Projects() {
             <div className="flex flex-wrap justify-center gap-2 mb-16 max-w-[42rem] mx-auto">
               {project.tags.map((tag, tagIndex) => (
                 <span
-                  className="bg-gradient-to-br from-indigo-500 to-indigo-600 dark:from-indigo-400 dark:to-indigo-500 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full shadow-sm"
+                  className="bg-gradient-to-br from-indigo-200 to-indigo-600 dark:from-indigo-200 dark:to-indigo-0 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full shadow-sm"
                   key={tagIndex}
                 >
                   {tag}

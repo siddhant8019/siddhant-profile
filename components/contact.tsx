@@ -38,8 +38,26 @@ export default function Contact() {
           <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
           <div className="h-3 w-3 rounded-full bg-green-500"></div>
           <div className="ml-2 text-xs text-gray-500 dark:text-gray-400 font-code">
-            contact.form
+            contact.info
           </div>
+        </div>
+
+        <div className="mb-6 text-left code-text">
+          <span className="code-keyword">const</span>{" "}
+          <span className="code-variable">contactInfo</span>{" "}
+          <span className="code-bracket">=</span>{" "}
+          <span className="code-bracket">{`{`}</span>
+          <br />
+          &nbsp;&nbsp;<span className="code-string">email</span>
+          <span className="code-bracket">:</span>{" "}
+          <span className="code-string">"sidhnpatil08@gmail.com"</span>
+          <span className="code-bracket">,</span>
+          <br />
+          &nbsp;&nbsp;<span className="code-string">location</span>
+          <span className="code-bracket">:</span>{" "}
+          <span className="code-string">"San Francisco, CA"</span>
+          <br />
+          <span className="code-bracket">{`}`}</span>
         </div>
 
         {isSubmitted ? (

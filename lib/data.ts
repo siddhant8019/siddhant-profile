@@ -40,6 +40,7 @@ export const experiencesData = [
     icon: React.createElement(CgWorkAlt),
     date: "Jun 2024 - Present",
     csulb: true,
+    link: "https://www.csulb.edu/college-of-business",
   },
   {
     title: "Software Engineer, Humancloud Inc.",
@@ -49,6 +50,7 @@ export const experiencesData = [
     icon: React.createElement(FaReact, { className: "text-blue-500" }),
     date: "Jun 2022 - Jul 2023",
     humancloud: true,
+    link: "https://humancloud.ltd/",
   },
   {
     title: "MS in Computer Science",
@@ -58,15 +60,17 @@ export const experiencesData = [
     icon: React.createElement(LuGraduationCap),
     date: "Aug 2023 - May 2025",
     mscs: true,
+    link: "https://www.csulb.edu/college-of-engineering/computer-engineering-computer-science",
   },
   {
     title: "BTech in Information Technology",
     location: "Vishwakarma Institute of Information Technology, India",
     description:
-      "• CGPA: 3.25/10\n• Courses: Data Structures, Algorithms, Databases\n• Project: Healthcare Predictive Analytics using ML",
+      "• CGPA: 9.24/10\n• Courses: Data Structures, Algorithms, Databases\n• Project: Healthcare Predictive Analytics using ML",
     icon: React.createElement(LuGraduationCap),
     date: "Aug 2019 - May 2023",
     viit: true,
+    link: "https://www.viit.ac.in/",
   },
   {
     title: "Google Cloud Ready Facilitator",
@@ -76,6 +80,7 @@ export const experiencesData = [
     icon: React.createElement(SiGooglecloud, { className: "text-[#4285F4]" }),
     date: "Feb 2022 - May 2022",
     google: true,
+    link: "https://cloud.google.com/",
   },
 ] as const;
 

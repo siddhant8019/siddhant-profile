@@ -42,7 +42,7 @@ export default function About() {
       ),
       title: "Research & Innovation",
       description:
-        "My academic research in Advanced AI and Computer Vision drives my work. I've applied Random Forest and XGBoost models for anomaly detection, and developed eye-tracking systems achieving 85% accuracy for impairment detection.",
+        "My academic research in Advanced AI and Computer Vision drives my work. I've applied Random Forest and XGBoost models for anomaly detection, and developed eye-tracking systems.",
     },
   ];
 
