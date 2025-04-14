@@ -13,7 +13,7 @@ type SkillCategory =
   | "Data & ML"
   | "Infrastructure"
   | "Databases"
-  | "Tools";
+  | "Concepts";
 
 interface SkillInfo {
   name: string;
@@ -23,8 +23,8 @@ interface SkillInfo {
 const skillCategories: Record<SkillCategory, SkillInfo[]> = {
   "Core Languages": [
     { name: "Python" },
-    { name: "JavaScript/TypeScript" },
-    { name: "SQL" },
+    { name: "JavaScript" },
+    { name: "TypeScript" },
     { name: "Java" },
     { name: "C++" },
     { name: "R" },
@@ -35,6 +35,7 @@ const skillCategories: Record<SkillCategory, SkillInfo[]> = {
     { name: "Node.js" },
     { name: "Django" },
     { name: "Flask" },
+    { name: "Tailwind CSS" },
   ],
   "Data & ML": [
     { name: "Machine Learning" },
@@ -51,13 +52,20 @@ const skillCategories: Record<SkillCategory, SkillInfo[]> = {
     { name: "CI/CD" },
   ],
   Databases: [
+    { name: "SQL" },
     { name: "PostgreSQL" },
-    { name: "MongoDB" },
-    { name: "SQLite" },
     { name: "DuckDB" },
     { name: "NoSQL" },
   ],
-  Tools: [{ name: "Git/GitHub" }, { name: "Linux" }, { name: "Microservices" }],
+  Concepts: [
+    { name: "Git/GitHub" },
+    { name: "Design Patterns" },
+    { name: "Microservices" },
+    { name: "Restful" },
+    { name: "GraphQL" },
+    { name: "Redis" },
+    { name: "Kafka" },
+  ],
 };
 
 const categoryIcons: Record<SkillCategory, JSX.Element> = {
@@ -66,7 +74,7 @@ const categoryIcons: Record<SkillCategory, JSX.Element> = {
   "Data & ML": <FaTools className="text-2xl" />,
   Infrastructure: <FaCloud className="text-2xl" />,
   Databases: <FaDatabase className="text-2xl" />,
-  Tools: <FaTools className="text-2xl" />,
+  Concepts: <FaTools className="text-2xl" />,
 };
 
 export default function Skills() {
@@ -166,14 +174,6 @@ export default function Skills() {
                               <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 dark:from-indigo-500/20 dark:to-purple-500/20 p-3 rounded-lg border border-indigo-200 dark:border-indigo-800 hover:shadow-md transition-all">
                                 <div className="text-sm font-medium break-words flex items-center justify-between">
                                   <span>{skill.name}</span>
-                                </div>
-                                <div className="h-1 w-full bg-gray-200 dark:bg-gray-700 rounded-full mt-2">
-                                  <motion.div
-                                    className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
-                                    initial={{ width: 0 }}
-                                    animate={{ width: "85%" }}
-                                    transition={{ duration: 1, delay: 0.2 }}
-                                  />
                                 </div>
                               </div>
                             </div>
