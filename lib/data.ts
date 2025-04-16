@@ -86,13 +86,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Eye-Tracking-Based Alcohol Impairment Detection",
+    title: "Eye-Based Analysis System",
     description:
-      "• Created predictive system with XGBoost/RF -> BAC and HGN detection\n• Engineered custom pipelines for eye movement analysis\n• Implemented MLOps practices reducing operational costs",
-    tags: ["Python", "XGBoost", "Random Forest", "ML/MLOps", "Eye Tracking"],
+      "• Developed a comprehensive eye movement analysis system for detecting various impairments\n• Implemented multiple specialized models for smooth pursuit, nystagmus, and cannabis influence detection\n• Created modular architecture with base model class for easy extension and maintenance",
+    tags: [
+      "Python",
+      "Machine Learning",
+      "Computer Vision",
+      "Eye Tracking",
+      "MLOps",
+    ],
     imageUrl: "/eye.png",
     width: 1200,
     height: 800,
+    link: "https://github.com/siddhant8019/eye_based-analysis",
   },
   {
     title: "LLM Powered Document QA System",
