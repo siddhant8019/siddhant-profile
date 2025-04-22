@@ -2,7 +2,7 @@
 
 > _“Building the future, one line of code at a time”_
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-online-brightgreen)](https://siddhant-profile.vercel.app)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-online-brightgreen)](https://siprofile.me)  
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ---
