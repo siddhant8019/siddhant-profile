@@ -1,30 +1,73 @@
-# Portfolio
+# 🚀 Siddhant Patil’s Portfolio
 
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Live Demo](https://img.shields.io/badge/demo-live-success.svg)](https://your-site-link.com)
+> _“Building the future, one line of code at a time”_
 
-![Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-online-brightgreen)](https://siddhant-profile.vercel.app)  
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## Tech
+---
 
-- Next.js 13
-- React
-- TypeScript
-- Tailwind CSS
+## 👋 About Me
 
-## Features
+I’m **Siddhant Patil**, a Full‑Stack Engineer & AI/ML enthusiast currently wrapping up my MS in Computer Science at CSULB. As a Research Assistant, I bridge cutting‑edge deep learning research with polished end‑user experiences. When I’m not architecting scalable web apps, you’ll find me optimizing ML pipelines or hunting down the perfect cup of coffee in LA.
 
-- 🚀 Blazing-fast performance (98+ Lighthouse)
-- 🌓 Smart theme detection
-- 📧 Spam-protected contact form
-- 📱 Mobile-first responsive design
+---
 
-## Start
+## 🔍 What You’ll Find Here
+
+- 🎨 **Sleek, lightning‑fast UI** built with Next.js & React
+- 🤖 **AI/ML demos** showcasing my work in eye‑tracking impairment detection, RAG‑powered Document Q&A, and more
+- 📄 **Downloadable Resume** & **Contact** form—drop me a line, spam‑free
+
+---
+
+## 🛠️ Tech Stack & Highlights
+
+| Frontend                            | Backend & API        | AI/ML & Data          | DevOps & Hosting |
+| :---------------------------------- | :------------------- | :-------------------- | :--------------- |
+| Next.js 13 & React 18               | Node.js & Express.js | TensorFlow, PyTorch   | Vercel           |
+| TypeScript & Tailwind CSS           | GraphQL & REST       | Scikit‑Learn, XGBoost | GitHub Actions   |
+| Framer Motion & Tailwind Animations | PostgreSQL, MongoDB  | OpenAI & Vertex AI    | Docker           |
+
+- **SSR & ISR:** Blazing page loads with Next.js
+- **Dark/Light Mode:** Auto‑detects your system theme
+- **Spam‑Protected Contact:** Nodemailer + simple captcha
+- **Fully Responsive:** Pixel‑perfect on mobile, tablet, & desktop
+
+---
+
+## 📂 Featured Projects
+
+### 1. EyeTrack Impairment Detector
+
+> Real‑time alcohol impairment prediction using just your eye movements.
+
+- Engineered a pipeline in Python to extract saccades, smooth pursuit, pupil dilation
+- Trained XGBoost & RandomForest models achieving **85%+ accuracy**
+- Live demo uses WebSockets to stream data from an eye‑tracker to a Next.js dashboard
+
+### 2. AI‑Powered Document Q&A
+
+> Ask complex questions of PDFs in natural language.
+
+- Ingests contracts into GCP buckets, chunks & embeds text via Vertex AI
+- RAG pipeline with custom prompts for precision & context retention
+- Interactive UI with instant answer cards & source citation
+
+For the full project list, check out the **Work** section on the site!
+
+---
+
+## 🚀 Get Started Locally
 
 ```bash
-npm install && npm run dev
+# 1. Clone the repo
+git clone https://github.com/siddhant8019/siddhant-profile.git
+cd siddhant-profile
+
+# 2. Install dependencies & run
+npm install
+npm run dev
+
+# 3. Open http://localhost:3000 and enjoy!
 ```
-
-## License
-
-MIT
