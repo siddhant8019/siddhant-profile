@@ -1,7 +1,7 @@
 # Modern Portfolio Website
 
-![GitHub Repo Views](https://img.shields.io/github/watchers/yourusername/portfolio-website?style=social)
-![GitHub Stars](https://img.shields.io/github/stars/yourusername/portfolio-website?style=social)
+![GitHub Repo Views](https://img.shields.io/github/watchers/siddhant8019/siddhant-portfolio?style=social)
+![GitHub Stars](https://img.shields.io/github/stars/siddhant8019/siddhant-portfolio?style=social)
 
 A modern, responsive portfolio website built with Next.js 13, React, TypeScript, Tailwind CSS, and Framer Motion.
 
