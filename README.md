@@ -9,7 +9,7 @@
 
 ## 👋 About Me
 
-I’m **Siddhant Patil**, a Full‑Stack Engineer & AI/ML enthusiast currently wrapping up my MS in Computer Science at CSULB. As a Research Assistant, I bridge cutting‑edge deep learning research with polished end‑user experiences. When I’m not architecting scalable web apps, you’ll find me optimizing ML pipelines or hunting down the perfect cup of coffee in LA.
+I’m **Siddhant Patil**, a Full‑Stack Engineer & AI/ML enthusiast graduated in masters from California State University Long Beach in Computer Science. As a Research Assistant, I bridge cutting‑edge deep learning research with polished end‑user experiences. When I’m not architecting scalable web apps, you’ll find me optimizing ML pipelines or hunting down the perfect cup of coffee in LA.
 
 ---
 
