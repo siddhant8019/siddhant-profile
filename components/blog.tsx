@@ -65,7 +65,7 @@ export default function Blog() {
       id="blog"
     >
       <h2 className="text-3xl font-medium capitalize mb-8 text-center">
-        The Thought Archive
+        Thoughts
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {blogs.map((blog, index) => (
