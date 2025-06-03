@@ -79,7 +79,7 @@ export default function Intro() {
           <br />
           &nbsp;&nbsp;<span className="code-string">name</span>
           <span className="code-bracket">:</span>{" "}
-          <span className="code-string">"Siddhant"</span>
+          <span className="code-string">"Siddhant Nitin"</span>
           <span className="code-bracket">,</span>
           <br />
           &nbsp;&nbsp;<span className="code-string">role</span>
@@ -104,7 +104,7 @@ export default function Intro() {
           <span className="code-variable">ideas</span>
           <span className="code-bracket">)</span>{" "}
           <span className="code-keyword">{"=>"}</span>{" "}
-          <span className="code-string">"innovative systems"</span>
+          <span className="code-string">"efficient & scalable systems"</span>
           <span className="code-bracket">,</span>
           <br />
           &nbsp;&nbsp;
@@ -122,7 +122,9 @@ export default function Intro() {
           transition={{ delay: 0.5 }}
         >
           <span className="code-keyword">export default</span>{" "}
-          <span className="code-function">developer</span>
+          <span className="code-function">
+            Full-Stack & AI/ML- oriented Software Engineer
+          </span>
           <span className="code-bracket">;</span>
         </motion.div>
       </div>

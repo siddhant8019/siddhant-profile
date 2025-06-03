@@ -16,33 +16,33 @@ export default function About() {
       icon: (
         <BsLightningChargeFill className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
       ),
-      title: "The Engineer's Mindset",
+      title: "Full Stack Innovator",
       description:
-        "With a foundation in Software Engineering and AI/ML, I approach problems analytically, breaking down complex challenges into solvable components. I believe great software is both functional and elegant.",
+        "As a passionate full-stack developer, I specialize in building scalable web applications using modern technologies. My expertise spans from crafting intuitive user interfaces to architecting robust backend systems that deliver exceptional user experiences.",
     },
     {
       icon: (
         <FaRobot className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
       ),
-      title: "AI Enthusiast",
+      title: "AI & ML Practitioner",
       description:
-        "I'm fascinated by how AI systems can enhance human capabilities. My work focuses on creating intelligent solutions that provide real value, from ML-powered analytics to user-friendly AI interfaces.",
+        "I combine my software engineering skills with AI/ML expertise to create intelligent solutions. From developing computer vision systems to implementing machine learning models, I bridge the gap between cutting-edge AI research and practical applications.",
     },
     {
       icon: (
         <BsTools className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
       ),
-      title: "Tech Toolkit",
+      title: "Tech Stack Mastery",
       description:
-        "My core expertise includes Node.js, FastAPI, PostgreSQL, and AI/ML systems. I specialize in designing fault-tolerant architectures and creating efficient APIs that scale with your business needs.",
+        "Proficient in React, Node.js, and Python ecosystems, I build full-stack applications with a focus on performance and scalability. My toolkit includes modern frameworks, cloud services, and best practices in software development.",
     },
     {
       icon: (
         <FaSearchengin className="text-gray-800 dark:text-gray-200 text-4xl mb-4" />
       ),
-      title: "Research & Innovation",
+      title: "Problem Solver",
       description:
-        "My academic research in Advanced AI and Computer Vision drives my work. I've applied Random Forest and XGBoost models for anomaly detection, and developed eye-tracking systems.",
+        "With a strong foundation in computer science and software engineering, I tackle complex challenges through systematic problem-solving. My approach combines technical expertise with creative thinking to deliver innovative solutions.",
     },
   ];
 
@@ -103,9 +103,9 @@ export default function About() {
           transition={{ delay: 0.7 }}
         >
           <p className="text-sm text-gray-700 dark:text-gray-300 italic">
-            "I believe technology should solve real problems and improve lives.
-            My continuous learning journey keeps me at the cutting edge of
-            what's possible."
+            "I'm driven by the intersection of technology and human potential.
+            Every line of code I write is an opportunity to create something
+            meaningful that makes a difference in people's lives."
           </p>
         </motion.div>
       </div>
