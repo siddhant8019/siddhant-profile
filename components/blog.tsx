@@ -8,6 +8,22 @@ import { BsMedium } from "react-icons/bs";
 
 const blogs = [
   {
+    title:
+      "From Entry-Level to Obsolete: How AI is Rewriting the Engineer's First Job",
+    description:
+      "Explore how artificial intelligence is transforming entry-level engineering roles and what this means for the future of software development careers.",
+    link: "https://medium.com/@siddhantnitin/from-entry-level-to-obsolete-how-ai-is-rewriting-the-engineers-first-job-5bc377f89456",
+    date: "May 2024",
+  },
+  {
+    title:
+      "Cybersecurity is Broken in Business Schools: I Spent 6 Months Fixing It",
+    description:
+      "A deep dive into the challenges of cybersecurity education in business schools and the solutions implemented to bridge the gap between theory and practice.",
+    link: "https://medium.com/@siddhantnitin/cybersecurity-is-broken-in-business-schools-i-spent-6-months-fixing-it-1ce7f54d0882",
+    date: "April 2024",
+  },
+  {
     title: "RAG PDFs in Minutes with Google Cloud's Vertex AI",
     description:
       "Learn how to build a production-ready RAG system for PDFs using Google Cloud's Vertex AI, complete with secure API access and a sleek frontend.",
@@ -67,66 +83,79 @@ export default function Blog() {
       <h2 className="text-3xl font-medium capitalize mb-8 text-center">
         Thoughts
       </h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {blogs.map((blog, index) => (
-          <motion.div
-            key={index}
-            className="group bg-white/80 dark:bg-white/10 p-6 rounded-xl shadow-lg backdrop-blur-sm border border-black/5 dark:border-white/5 hover:border-black/10 dark:hover:border-white/10 transition-all"
-            variants={cardVariants}
-            initial="initial"
-            animate="animate"
-            whileHover="hover"
-            onHoverStart={() => setHoveredIndex(index)}
-            onHoverEnd={() => setHoveredIndex(null)}
-            transition={{ delay: index * 0.1 }}
-          >
-            <div className="flex items-center mb-4 group-hover:scale-105 transition-transform">
-              <BsMedium className="text-2xl mr-2 group-hover:rotate-12 transition-transform" />
-              <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                {blog.date}
-              </span>
-            </div>
-            <motion.h3
-              className="text-xl font-semibold mb-2 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent"
-              initial={{ opacity: 0.8 }}
-              whileHover={{ opacity: 1 }}
-            >
-              {blog.title}
-            </motion.h3>
-            <p
-              className={`text-gray-600 dark:text-gray-300 mb-4 transition-all duration-300 ${
-                hoveredIndex === index ? "line-clamp-none" : "line-clamp-3"
-              }`}
-            >
-              {blog.description}
-            </p>
-            <motion.a
-              href={blog.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
-              whileHover={{ x: 5 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              Read More
-              <svg
-                className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+      <div className="relative">
+        <div className="overflow-x-auto pb-6 hide-scrollbar">
+          <div className="flex gap-6 min-w-max px-2">
+            {blogs.map((blog, index) => (
+              <motion.div
+                key={index}
+                className="group bg-white/80 dark:bg-white/10 p-6 rounded-xl shadow-lg backdrop-blur-sm border border-black/5 dark:border-white/5 hover:border-black/10 dark:hover:border-white/10 transition-all w-[400px]"
+                variants={cardVariants}
+                initial="initial"
+                animate="animate"
+                whileHover="hover"
+                onHoverStart={() => setHoveredIndex(index)}
+                onHoverEnd={() => setHoveredIndex(null)}
+                transition={{ delay: index * 0.1 }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </motion.a>
-          </motion.div>
-        ))}
+                <div className="flex items-center mb-4 group-hover:scale-105 transition-transform">
+                  <BsMedium className="text-2xl mr-2 group-hover:rotate-12 transition-transform" />
+                  <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                    {blog.date}
+                  </span>
+                </div>
+                <motion.h3
+                  className="text-xl font-semibold mb-2 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent"
+                  initial={{ opacity: 0.8 }}
+                  whileHover={{ opacity: 1 }}
+                >
+                  {blog.title}
+                </motion.h3>
+                <p
+                  className={`text-gray-600 dark:text-gray-300 mb-4 transition-all duration-300 ${
+                    hoveredIndex === index ? "line-clamp-none" : "line-clamp-3"
+                  }`}
+                >
+                  {blog.description}
+                </p>
+                <motion.a
+                  href={blog.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  Read More
+                  <svg
+                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </motion.a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
+      <style jsx global>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </motion.section>
   );
 }
