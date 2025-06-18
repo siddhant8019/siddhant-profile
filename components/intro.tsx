@@ -140,7 +140,8 @@ export default function Intro() {
         <a
           className="group z-10 bg-white px-5 py-2 flex items-center gap-2 rounded-md outline-none hover:scale-105 active:scale-100 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:border-gray-700 dark:hover:border-gray-600 code-text"
           href="https://drive.google.com/file/d/1UOeLtTotuDFfFq7ul-hgXzf7DP1AB6UW/view?usp=sharing"
-          download
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span className="code-variable">resume</span>
           <span className="code-bracket">.</span>
@@ -154,6 +155,7 @@ export default function Intro() {
             className="bg-white p-3 text-gray-700 hover:text-gray-900 flex items-center gap-2 rounded-md hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
             href="https://linkedin.com/in/siddhantnpatil"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <BsLinkedin />
           </a>
@@ -162,6 +164,7 @@ export default function Intro() {
             className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-md hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
             href="https://github.com/siddhant8019"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FaGithubSquare />
           </a>
@@ -170,6 +173,7 @@ export default function Intro() {
             className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-md hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
             href="https://medium.com/@siddhantnitin"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FaMediumM />
           </a>
