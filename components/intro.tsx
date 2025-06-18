@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaMedium, FaMediumM } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -79,7 +79,7 @@ export default function Intro() {
           <br />
           &nbsp;&nbsp;<span className="code-string">name</span>
           <span className="code-bracket">:</span>{" "}
-          <span className="code-string">"Siddhant Nitin"</span>
+          <span className="code-string">"Siddhant Nitin Patil"</span>
           <span className="code-bracket">,</span>
           <br />
           &nbsp;&nbsp;<span className="code-string">role</span>
@@ -164,6 +164,14 @@ export default function Intro() {
             target="_blank"
           >
             <FaGithubSquare />
+          </a>
+
+          <a
+            className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-md hover:scale-110 active:scale-105 transition cursor-pointer border border-gray-200 hover:border-gray-300 dark:bg-white/10 dark:text-white/60 dark:border-gray-700 dark:hover:border-gray-600"
+            href="https://medium.com/@siddhantnitin"
+            target="_blank"
+          >
+            <FaMediumM />
           </a>
         </div>
       </motion.div>
