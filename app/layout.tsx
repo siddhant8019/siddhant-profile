@@ -6,6 +6,7 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
+import InteractiveBackground from "@/components/interactive-background";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
@@ -18,9 +19,35 @@ const firaCode = Fira_Code({
 });
 
 export const metadata = {
-  title: "Siddhant | Personal Portfolio",
+  metadataBase: new URL("https://siprofile.me"),
+  title: "Siddhant Patil, AI Engineer and Product Guy",
   description:
-    "Full Stack guy with a passion for building scalable and efficient systems.",
+    "AI Engineer focused on agentic systems, product development, and intelligent automation. Work at Teamcast.ai, CSULB, humancloud.",
+  keywords: [
+    "Software Engineer",
+    "Backend",
+    "AI systems",
+    "Full-stack",
+    "Python",
+    "FastAPI",
+    "React",
+    "PostgreSQL",
+  ],
+  authors: [{ name: "Siddhant Patil" }],
+  openGraph: {
+    title: "Siddhant Patil, AI Engineer and Product Guy",
+    description:
+      "AI Engineer focused on agentic systems, product development, and intelligent automation. Work at Teamcast.ai, CSULB, humancloud.",
+    type: "website",
+    url: "https://siprofile.me",
+    siteName: "Siddhant Patil",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Siddhant Patil, AI Engineer and Product Guy",
+    description:
+      "AI Engineer focused on agentic systems, product development, and intelligent automation. Work at Teamcast.ai, CSULB, humancloud.",
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -48,19 +75,57 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Siddhant Patil",
+              jobTitle: "Software Engineer",
+              description:
+                "Engineer focused on backend systems, agentic workflows, and full-stack delivery",
+              url: "https://siprofile.me",
+              sameAs: [
+                "https://www.linkedin.com/in/siddhantnpatil",
+                "https://github.com/siddhant8019",
+              ],
+              email: "sidhnpatil08@gmail.com",
+              knowsAbout: [
+                "Software Engineering",
+                "Backend Development",
+                "AI Systems",
+                "Full-stack Development",
+                "Python",
+                "FastAPI",
+                "React",
+                "PostgreSQL",
+              ],
+              worksFor: [
+                {
+                  "@type": "Organization",
+                  name: "Teamcast.ai",
+                },
+                {
+                  "@type": "Organization",
+                  name: "CSULB",
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${inter.className} bg-[#f6f9f1] text-[#000000] relative pt-16 sm:pt-28 md:pt-36 dark:bg-[#231f1f] dark:text-[#ffffff]`}
       >
-        <div className="bg-[#A3BCF9] absolute top-0 -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[12rem] sm:w-[68.75rem] dark:bg-[#223e74]"></div>
-        <div className="bg-[#c2d4f9] fixed bottom-0 -z-10 left-[-35rem] min-h-[50rem] w-[150rem] rounded-full blur-[12rem] sm:w-[78.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#223e74]"></div>
-
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
-            {children}
-            <Footer />
-
+            <div className="relative">
+              <InteractiveBackground />
+              <Header />
+              {children}
+              <Footer />
+            </div>
             <Toaster position="top-right" />
             <ThemeSwitch />
           </ActiveSectionContextProvider>

@@ -48,15 +48,11 @@ export default function ThemeContextProvider({
     }
   }, []);
 
-  // Prevent hydration mismatch by only rendering children after mounted
-  if (!mounted) {
-    return null;
-  }
-
+  // Always render the provider, but use a default theme until mounted
   return (
     <ThemeContext.Provider
       value={{
-        theme,
+        theme: mounted ? theme : "light",
         toggleTheme,
       }}
     >

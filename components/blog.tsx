@@ -1,161 +1,78 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useEffect, useState } from "react";
-import { BsMedium } from "react-icons/bs";
-
-const blogs = [
-  {
-    title:
-      "From Entry-Level to Obsolete: How AI is Rewriting the Engineer's First Job",
-    description:
-      "Explore how artificial intelligence is transforming entry-level engineering roles and what this means for the future of software development careers.",
-    link: "https://medium.com/@siddhantnitin/from-entry-level-to-obsolete-how-ai-is-rewriting-the-engineers-first-job-5bc377f89456",
-    date: "May 2024",
-  },
-  {
-    title:
-      "Cybersecurity is Broken in Business Schools: I Spent 6 Months Fixing It",
-    description:
-      "A deep dive into the challenges of cybersecurity education in business schools and the solutions implemented to bridge the gap between theory and practice.",
-    link: "https://medium.com/@siddhantnitin/cybersecurity-is-broken-in-business-schools-i-spent-6-months-fixing-it-1ce7f54d0882",
-    date: "April 2024",
-  },
-  {
-    title: "RAG PDFs in Minutes with Google Cloud's Vertex AI",
-    description:
-      "Learn how to build a production-ready RAG system for PDFs using Google Cloud's Vertex AI, complete with secure API access and a sleek frontend.",
-    link: "https://medium.com/siddhants-ai-lab/rag-pdfs-in-minutes-with-google-clouds-vertex-ai-7baa824ba66f",
-    date: "April 2024",
-  },
-  {
-    title: "Eye Track Analysis: Building an Impairment Detection System",
-    description:
-      "Explore how to build an impairment detection system using just eye movements, leveraging computer vision and machine learning techniques.",
-    link: "https://medium.com/@siddhantnitin/️-️-eye-track-analysis-building-an-impairment-detection-system-with-just-eye-movements-f877bca560e0",
-    date: "March 2024",
-  },
-  {
-    title:
-      "From Lines of Code to Conversations: How Cursor is Rewriting the IDE",
-    description:
-      "Discover how Cursor is revolutionizing the IDE experience by integrating AI-powered conversations into the development workflow.",
-    link: "https://medium.com/@siddhantnitin/from-lines-of-code-to-conversations-how-cursor-is-rewriting-the-ide-2383a387e3d8",
-    date: "February 2024",
-  },
-];
+import { portfolioData } from "@/lib/data";
+import { BsMedium, BsArrowUpRight } from "react-icons/bs";
 
 export default function Blog() {
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Blog");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
-
-  const cardVariants = {
-    initial: { scale: 0.9, opacity: 0 },
-    animate: { scale: 1, opacity: 1 },
-    hover: {
-      scale: 1.05,
-      boxShadow:
-        "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-      transition: { type: "spring", stiffness: 300, damping: 15 },
-    },
-  };
-
   return (
-    <motion.section
-      ref={ref}
-      className="mb-28 max-w-[60rem] text-center leading-8 sm:mb-40 scroll-mt-28 px-4"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
-      id="blog"
-    >
-      <h2 className="text-3xl font-medium capitalize mb-8 text-center">
-        Thoughts
-      </h2>
-      <div className="relative">
-        <div className="overflow-x-auto pb-6 hide-scrollbar">
-          <div className="flex gap-6 min-w-max px-2">
-            {blogs.map((blog, index) => (
-              <motion.div
-                key={index}
-                className="group bg-white/80 dark:bg-white/10 p-6 rounded-xl shadow-lg backdrop-blur-sm border border-black/5 dark:border-white/5 hover:border-black/10 dark:hover:border-white/10 transition-all w-[400px]"
-                variants={cardVariants}
-                initial="initial"
-                animate="animate"
-                whileHover="hover"
-                onHoverStart={() => setHoveredIndex(index)}
-                onHoverEnd={() => setHoveredIndex(null)}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="flex items-center mb-4 group-hover:scale-105 transition-transform">
-                  <BsMedium className="text-2xl mr-2 group-hover:rotate-12 transition-transform" />
-                  <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                    {blog.date}
-                  </span>
-                </div>
-                <motion.h3
-                  className="text-xl font-semibold mb-2 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent"
-                  initial={{ opacity: 0.8 }}
-                  whileHover={{ opacity: 1 }}
+    <section className="mb-16 sm:mb-28 px-4">
+      <div className="max-w-4xl mx-auto">
+        <motion.h2
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#000000] dark:text-[#ffffff]"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Writing
+        </motion.h2>
+
+        <div className="space-y-4 sm:space-y-6">
+          {portfolioData.blog.map(
+            (post, index) =>
+              index < 3 && (
+                <motion.article
+                  key={index}
+                  className="bg-white dark:bg-[#2d2a2a] p-4 sm:p-6 rounded-lg border border-[#dae2e2] dark:border-[#797d59]/40 hover:shadow-xl hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer group"
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
                 >
-                  {blog.title}
-                </motion.h3>
-                <p
-                  className={`text-gray-600 dark:text-gray-300 mb-4 transition-all duration-300 ${
-                    hoveredIndex === index ? "line-clamp-none" : "line-clamp-3"
-                  }`}
-                >
-                  {blog.description}
-                </p>
-                <motion.a
-                  href={blog.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium"
-                  whileHover={{ x: 5 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
-                  Read More
-                  <svg
-                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                    <BsMedium className="text-xl sm:text-2xl text-[#000000]/80 dark:text-[#797d59]" />
+                    <span className="text-xs sm:text-sm text-[#000000]/70 dark:text-[#ffffff]/70">
+                      {post.date}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg sm:text-xl font-semibold text-[#000000] dark:text-[#797d59] mb-3">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-sm sm:text-base text-[#000000]/80 dark:text-[#ffffff]/80 leading-relaxed mb-4">
+                    {post.description}
+                  </p>
+
+                  <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs sm:text-sm text-[#000000]/70 dark:text-[#797d59] hover:text-[#000000] dark:hover:text-[#797d59]/80 transition-colors"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </motion.a>
-              </motion.div>
-            ))}
-          </div>
+                    Read on Medium
+                  </a>
+                </motion.article>
+              )
+          )}
         </div>
+
+        <motion.div
+          className="text-center mt-6 sm:mt-8"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <a
+            href="/blog"
+            className="inline-flex items-center gap-2 bg-[#000000] text-[#f6f9f1] px-5 py-2.5 sm:px-6 sm:py-3 rounded-full hover:bg-[#000000]/90 transition-colors border border-[#dae2e2] dark:bg-[#797d59] dark:text-[#ffffff] dark:border-[#797d59] dark:hover:bg-[#797d59]/90 text-sm sm:text-base"
+          >
+            View all posts
+            <BsArrowUpRight className="text-sm" />
+          </a>
+        </motion.div>
       </div>
-      <style jsx global>{`
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
-    </motion.section>
+    </section>
   );
 }
