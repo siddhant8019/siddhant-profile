@@ -33,7 +33,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "AI Engineer",
+    title: "Co-Founder (AI Engineer)",
     company: "Teamcast.ai",
     dates: "Aug 2025 – Present",
     location: "Palo Alto, CA",
@@ -51,13 +51,13 @@ export const experiencesData = [
     icon: React.createElement(CgWorkAlt),
   },
   {
-    title: "Full-Stack AI Engineer",
-    company: "humancloud",
-    dates: "Jun 2021 – Jul 2023",
-    location: "Remote",
+    title: "Co-Founder",
+    company: "Humancloud",
+    dates: "Aug 2023 – Present",
+    location: "Palo Alto, CA",
     description:
-      "Built end-to-end AI products including legal compliance platforms with ML integration, Angular-to-React migrations, and cloud-native applications. Focused on creating AI solutions that enhance user experience and business outcomes.",
-    icon: React.createElement(FaReact, { className: "text-blue-500" }),
+      "Humancloud build and deploy AI systems for enterprises — everything from fine-tuning large language models (LLMs) and setting up retrieval-augmented generation (RAG) pipelines, to building multi-agent workflows, cloud infrastructure for ML operations (MLOps), and governance frameworks.",
+    icon: React.createElement(CgWorkAlt),
   },
   {
     title: "AI & Cloud Facilitator",
