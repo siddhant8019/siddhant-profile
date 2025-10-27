@@ -52,12 +52,12 @@ export const experiencesData = [
   },
   {
     title: "Co-Founder",
-    company: "Humancloud",
+    company: "humancloud",
     dates: "Aug 2023 – Present",
     location: "Palo Alto, CA",
     description:
       "Humancloud build and deploy AI systems for enterprises — everything from fine-tuning large language models (LLMs) and setting up retrieval-augmented generation (RAG) pipelines, to building multi-agent workflows, cloud infrastructure for ML operations (MLOps), and governance frameworks.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FaReact, { className: "text-blue-500" }),
   },
   {
     title: "AI & Cloud Facilitator",
