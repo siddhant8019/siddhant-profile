@@ -26,6 +26,15 @@ const nextConfig = {
       allowedOrigins: ["localhost:3000", "localhost:3001", "siprofile.me"],
     },
   },
+  async redirects() {
+    return [
+      {
+        source: "/ai_brain",
+        destination: "https://ai-native-mortgage-under-sray6e9.gamma.site/",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
