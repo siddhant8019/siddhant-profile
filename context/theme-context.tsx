@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect, useState, createContext, useContext } from "react";
+import React, { createContext, useContext } from "react";
 
-type Theme = "light" | "dark";
+type Theme = "light";
 
 type ThemeContextProviderProps = {
   children: React.ReactNode;
@@ -10,7 +10,6 @@ type ThemeContextProviderProps = {
 
 type ThemeContextType = {
   theme: Theme;
-  toggleTheme: () => void;
 };
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
@@ -18,42 +17,10 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-  };
-
-  useEffect(() => {
-    setMounted(true);
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-
-    if (localTheme) {
-      setTheme(localTheme);
-      document.documentElement.classList.toggle("dark", localTheme === "dark");
-    } else {
-      // Set light theme as default
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
-  // Always render the provider, but use a default theme until mounted
   return (
     <ThemeContext.Provider
       value={{
-        theme: mounted ? theme : "light",
-        toggleTheme,
+        theme: "light",
       }}
     >
       {children}

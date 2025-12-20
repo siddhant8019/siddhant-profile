@@ -6,10 +6,6 @@ html {
   --line-color: #e5e7eb;
 }
 
-html.dark {
-  --line-color: #c2d4f9;
-}
-
 .borderBlack {
   @apply border border-black/10;
 }
@@ -25,27 +21,27 @@ html.dark {
 }
 
 .code-comment {
-  @apply text-gray-500 dark:text-gray-400 italic;
+  @apply text-gray-500 italic;
 }
 
 .code-function {
-  @apply text-blue-600 dark:text-blue-400 font-semibold;
+  @apply text-blue-600 font-semibold;
 }
 
 .code-keyword {
-  @apply text-purple-600 dark:text-purple-400 font-semibold;
+  @apply text-purple-600 font-semibold;
 }
 
 .code-string {
-  @apply text-green-600 dark:text-green-400;
+  @apply text-green-600;
 }
 
 .code-variable {
-  @apply text-amber-600 dark:text-amber-400;
+  @apply text-amber-600;
 }
 
 .code-bracket {
-  @apply text-gray-600 dark:text-gray-400 opacity-70;
+  @apply text-gray-600 opacity-70;
 }
 
 .typing-cursor::after {
