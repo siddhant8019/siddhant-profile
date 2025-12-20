@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import { Fira_Code } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import InteractiveBackground from "@/components/interactive-background";
 import { Toaster } from "react-hot-toast";
@@ -62,20 +61,6 @@ export default function RootLayout({
     <html lang="en" className={`!scroll-smooth ${firaCode.variable}`}>
       <head>
         <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const storedTheme = localStorage.getItem('theme') || 'dark';
-                  document.documentElement.classList.toggle('dark', storedTheme === 'dark');
-                } catch(e) {
-                  console.error('Error accessing localStorage:', e);
-                }
-              })();
-            `,
-          }}
-        />
-        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -116,7 +101,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} bg-[#f6f9f1] text-[#000000] relative pt-16 sm:pt-28 md:pt-36 dark:bg-[#231f1f] dark:text-[#ffffff]`}
+        className={`${inter.className} bg-[#f6f9f1] text-[#000000] relative pt-16 sm:pt-28 md:pt-36`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
@@ -127,7 +112,6 @@ export default function RootLayout({
               <Footer />
             </div>
             <Toaster position="top-right" />
-            <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
         <Analytics />
