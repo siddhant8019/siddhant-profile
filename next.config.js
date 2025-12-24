@@ -35,6 +35,14 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/birthday",
+        destination: "/birthday/index.html",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
