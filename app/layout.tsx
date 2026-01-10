@@ -105,8 +105,8 @@ export default function RootLayout({
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <div className="relative">
-              <InteractiveBackground />
+            <InteractiveBackground />
+            <div className="relative z-10">
               <Header />
               {children}
               <Footer />
