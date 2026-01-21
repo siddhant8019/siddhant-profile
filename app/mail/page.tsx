@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "@/components/submit-btn";
 import toast from "react-hot-toast";
@@ -43,11 +42,7 @@ export default function MailPage() {
     return (
       <main className="px-4 py-8 max-w-2xl mx-auto">
         <div className="glass-card card-ambient p-9 rounded-3xl text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
+          <div>
             <div className="w-16 h-16 bg-[#F8F8F8] rounded-full flex items-center justify-center mx-auto mb-6 border border-[#7B7B7B]/20">
               <svg
                 className="w-8 h-8 text-[#222222]"
@@ -75,7 +70,7 @@ export default function MailPage() {
             >
               Back to Home
             </a>
-          </motion.div>
+          </div>
         </div>
       </main>
     );
@@ -83,12 +78,7 @@ export default function MailPage() {
 
   return (
     <main className="px-4 py-8 max-w-2xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className="glass-card card-ambient p-9 rounded-3xl"
-      >
+      <div className="glass-card card-ambient p-9 rounded-3xl">
         <div className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-[#222222] mb-4 section-title">
             Get in Touch
@@ -195,7 +185,7 @@ export default function MailPage() {
             </a>
           </p>
         </div>
-      </motion.div>
+      </div>
     </main>
   );
 }

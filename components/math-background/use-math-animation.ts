@@ -236,5 +236,5 @@ export function useMathAnimation(
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [config]);
+  }, [config, canvasRef]);
 }
