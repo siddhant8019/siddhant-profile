@@ -294,7 +294,7 @@ export const portfolioData = {
       "I’m an AI engineer focused on shipping systems that survive contact with real users. I care more about reliability than cleverness, and more about outcomes than demos.",
   },
   about: {
-    bio: "I'm an AI Engineer and Product Guy who builds intelligent systems that actually work. My passion lies in creating AI products that solve real business problems, not just impressive demos. From multi-agent hiring systems to cybersecurity AI, I focus on building solutions that teams can rely on in production.",
+    bio: "I build AI systems that survive real usage. I turn messy workflows into reliable agents and retrieval stacks that teams trust in production.",
     mission: "Making AI accessible and practical for real-world applications",
     approach:
       "I believe the best AI products come from understanding both the technical possibilities and the human needs they serve. That's why I work at the intersection of AI engineering, product design, and user experience.",
