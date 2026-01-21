@@ -1,0 +1,35 @@
+<svg width="900" height="540" viewBox="0 0 900 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="540" rx="24" fill="#F8F8F8"/>
+  <rect x="40" y="40" width="820" height="460" rx="20" fill="#FFFFFF" stroke="#7B7B7B" stroke-opacity="0.3"/>
+
+  <rect x="90" y="90" width="340" height="360" rx="16" fill="#F8F8F8" stroke="#7B7B7B" stroke-opacity="0.35"/>
+  <text x="120" y="115" font-family="Inter, Arial" font-size="12" fill="#222222">Eval report</text>
+  <text x="300" y="115" font-family="Inter, Arial" font-size="12" fill="#7B7B7B">v2.3</text>
+  <rect x="120" y="130" width="180" height="14" rx="7" fill="#222222" fill-opacity="0.8"/>
+  <rect x="120" y="160" width="240" height="10" rx="5" fill="#7B7B7B" fill-opacity="0.5"/>
+  <rect x="120" y="182" width="200" height="10" rx="5" fill="#7B7B7B" fill-opacity="0.35"/>
+
+  <rect x="120" y="230" width="260" height="16" rx="8" fill="#7B7B7B" fill-opacity="0.25"/>
+  <rect x="120" y="260" width="230" height="12" rx="6" fill="#7B7B7B" fill-opacity="0.2"/>
+  <rect x="120" y="284" width="260" height="12" rx="6" fill="#7B7B7B" fill-opacity="0.2"/>
+
+  <rect x="120" y="330" width="120" height="12" rx="6" fill="#222222" fill-opacity="0.7"/>
+  <rect x="120" y="356" width="220" height="10" rx="5" fill="#7B7B7B" fill-opacity="0.3"/>
+  <rect x="120" y="378" width="200" height="10" rx="5" fill="#7B7B7B" fill-opacity="0.2"/>
+
+  <rect x="470" y="110" width="350" height="140" rx="16" fill="#FFFFFF" stroke="#7B7B7B" stroke-opacity="0.4"/>
+  <text x="500" y="130" font-family="Inter, Arial" font-size="12" fill="#222222">Coverage 92%</text>
+  <text x="640" y="130" font-family="Inter, Arial" font-size="12" fill="#7B7B7B">Fail 3</text>
+  <rect x="500" y="142" width="160" height="12" rx="6" fill="#222222" fill-opacity="0.8"/>
+  <rect x="500" y="168" width="260" height="10" rx="5" fill="#7B7B7B" fill-opacity="0.4"/>
+  <rect x="500" y="190" width="220" height="10" rx="5" fill="#7B7B7B" fill-opacity="0.3"/>
+
+  <rect x="470" y="280" width="350" height="170" rx="16" fill="#FFFFFF" stroke="#7B7B7B" stroke-opacity="0.4"/>
+  <text x="500" y="304" font-family="Inter, Arial" font-size="12" fill="#222222">Uncertainty 0.18</text>
+  <text x="660" y="304" font-family="Inter, Arial" font-size="12" fill="#7B7B7B">Eval 0.67</text>
+  <rect x="500" y="310" width="180" height="12" rx="6" fill="#222222" fill-opacity="0.8"/>
+  <rect x="500" y="336" width="240" height="10" rx="5" fill="#7B7B7B" fill-opacity="0.4"/>
+  <rect x="500" y="358" width="210" height="10" rx="5" fill="#7B7B7B" fill-opacity="0.3"/>
+  <rect x="500" y="388" width="120" height="12" rx="6" fill="#7B7B7B" fill-opacity="0.35"/>
+  <rect x="630" y="388" width="120" height="12" rx="6" fill="#7B7B7B" fill-opacity="0.25"/>
+</svg>

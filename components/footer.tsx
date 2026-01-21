@@ -54,7 +54,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="text-sm sm:text-base text-[#F8F8F8]/60">
-                AI Engineer and Product Guy
+                Decision Systems Builder
               </div>
             </div>
           </div>

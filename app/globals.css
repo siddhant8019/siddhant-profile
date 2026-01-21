@@ -97,6 +97,10 @@ html {
   color: transparent;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 .nav-link {
   position: relative;
   transition: color 180ms ease;

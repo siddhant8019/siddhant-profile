@@ -8,9 +8,12 @@ export default function Blog() {
   return (
     <section className="mb-16 sm:mb-28 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#222222] section-title">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 sm:mb-4 text-[#222222] section-title">
           Writing
         </h2>
+        <p className="text-sm sm:text-base text-center text-[#222222]/70 mb-8 sm:mb-12 max-w-2xl mx-auto">
+          Notes from building systems that didn’t work the first time.
+        </p>
 
         <div className="space-y-4 sm:space-y-6">
           {portfolioData.blog.map(

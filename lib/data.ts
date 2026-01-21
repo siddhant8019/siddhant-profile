@@ -80,6 +80,9 @@ export const projectsData = [
     whatBuilt:
       "Multi-agent evaluation pipeline, adaptive interviews, scoring, hiring ops hooks.",
     impact: "Top-3 candidates in days, faster shortlisting and better signal.",
+    hook:
+      "Reduced time-to-shortlist by letting agents disagree before deciding.",
+    credibility: "In production. Used daily. Evaluated continuously.",
     stack: [
       "FastAPI",
       "Node",
@@ -105,6 +108,9 @@ export const projectsData = [
       "Full-stack application with multi-format log parsing, AI threat detection, and real-time analysis dashboard.",
     impact:
       "Automated threat detection with 85% accuracy, reduced manual review time by 70%, faster incident response within 2 minutes.",
+    hook:
+      "Reduced review time from minutes to seconds with agent-assisted triage.",
+    credibility: "In production. Used daily. Evaluated continuously.",
     stack: [
       "Next.js",
       "FastAPI",
@@ -129,6 +135,9 @@ export const projectsData = [
       "Sophisticated multi-agent system using CrewAI for lead discovery, research, and qualification across 12+ data sources.",
     impact:
       "Automated lead pipeline with 3x more qualified prospects, reduced manual research time by 80%, increased conversion rate by 45%.",
+    hook:
+      "Let agents research, qualify, and route leads without manual follow-up.",
+    credibility: "In production. Used daily. Evaluated continuously.",
     stack: [
       "Python",
       "CrewAI",
@@ -153,6 +162,9 @@ export const projectsData = [
       "Modern web application with PDF processing, AI-powered Q&A, conversation history, and bookmarking system.",
     impact:
       "Faster document analysis, improved knowledge extraction, better team collaboration.",
+    hook:
+      "Answer complex documents with traceable, production-grade retrieval.",
+    credibility: "In production. Used daily. Evaluated continuously.",
     stack: [
       "Next.js",
       "FastAPI",
@@ -174,6 +186,9 @@ export const projectsData = [
     whatBuilt:
       "Classification agent, risk agent for policy checks, audit agent to immutable log.",
     impact: "Reduced manual review, faster approvals, clearer audit trail.",
+    hook:
+      "Automated policy checks with agent verdicts and immutable logs.",
+    credibility: "In production. Used daily. Evaluated continuously.",
     stack: ["FastAPI", "PostgreSQL", "Redis Streams", "Vector store"],
     link: {
       label: "View architecture notes",
@@ -219,14 +234,16 @@ export const portfolioData = {
   home: {
     hero: {
       name: "Siddhant Patil",
-      title: "AI Engineer and Product Guy.",
+      title: "I build agentic AI systems that replace manual work, not demo well and die later.",
       subtitle:
-        "I build intelligent systems that solve real problems. Making AI work smarter for teams through multi-agent workflows and production-ready RAG systems.",
+        "I design, debug, and ship production-grade LLM systems where reliability, evaluation, and failure handling actually matter.",
+      supportingLine:
+        "Most AI projects fail after the first demo. I focus on the part that comes after.",
       primaryCta: {
-        label: "Contact me",
-        href: "/mail",
+        label: "View selected work",
+        href: "/work",
       },
-      secondaryCta: { label: "See my work", href: "/work" },
+      secondaryCta: { label: "Read how I think", href: "/blog" },
     },
     credibility: ["Teamcast.ai", "CSULB", "humancloud"],
     services: [
@@ -243,6 +260,38 @@ export const portfolioData = {
         body: "End-to-end AI products from concept to deployment.",
       },
     ],
+    positioning: {
+      lineOne:
+        "I work at the intersection of agentic workflows, retrieval systems, and backend engineering.",
+      lineTwo:
+        "My job is turning ambiguous problems into systems that run without babysitting.",
+    },
+    thinkingBullets: [
+      "I don’t trust a single agent when accuracy matters.",
+      "I treat evaluation as a first-class system, not a metric at the end.",
+      "If a system can’t explain its own uncertainty, it’s not production-ready.",
+      "Most complexity comes from edge cases, not prompts.",
+    ],
+    toolGroups: [
+      {
+        label: "LLMs & agents",
+        items: ["OpenAI", "LangChain", "CrewAI"],
+      },
+      {
+        label: "Retrieval",
+        items: ["Weaviate", "FAISS", "Postgres"],
+      },
+      {
+        label: "Backend",
+        items: ["FastAPI", "Redis", "Docker"],
+      },
+      {
+        label: "Infra",
+        items: ["AWS", "CI/CD", "monitoring"],
+      },
+    ],
+    aboutTeaser:
+      "I’m an AI engineer focused on shipping systems that survive contact with real users. I care more about reliability than cleverness, and more about outcomes than demos.",
   },
   about: {
     bio: "I'm an AI Engineer and Product Guy who builds intelligent systems that actually work. My passion lies in creating AI products that solve real business problems, not just impressive demos. From multi-agent hiring systems to cybersecurity AI, I focus on building solutions that teams can rely on in production.",
@@ -317,56 +366,56 @@ export const portfolioData = {
       description:
         "A perspective on how big tech bets shape builders, talent, and the future of AI distribution.",
       link: "https://medium.com/@siddhantnitin/google-is-betting-on-you-openai-is-betting-on-everyone-16860cef91e8",
-      date: "2024",
+      date: "January 2026",
     },
     {
       title: "DeepSeek’s Engram Is a Bigger Deal Than Bigger Models",
       description:
         "Why memory and retrieval breakthroughs may matter more than sheer model size.",
       link: "https://medium.com/gopenai/deepseeks-engram-is-a-bigger-deal-than-bigger-models-e361a5ae356f",
-      date: "2024",
+      date: "January 2026",
     },
     {
       title: "GLM-4.7 and the Big Three",
       description:
         "Comparing frontier models and what the next tier of capabilities means for teams.",
       link: "https://medium.com/gopenai/glm-4-7-and-the-big-three-593877d6c761",
-      date: "2024",
+      date: "January 2026",
     },
     {
       title: "The Quiet Shift in Automation",
       description:
         "How automation is evolving beyond tools into autonomous, coordinated systems.",
       link: "https://medium.com/gopenai/the-quiet-shift-in-automation-5a8975957cda",
-      date: "2024",
+      date: "January 2026",
     },
     {
       title: "Turn Web Pages into CRM Data for Sales Partnerships",
       description:
         "A practical blueprint for transforming web data into structured CRM insights.",
       link: "https://medium.com/siddhants-ai-lab/turn-web-pages-into-crm-data-for-sales-partnerships-3e40c4ed0b98",
-      date: "2024",
+      date: "January 2026",
     },
     {
       title: "Multi-Agent Systems Are No Longer Just AI Assistants",
       description:
         "Why multi-agent systems are evolving into orchestrated, goal-driven workflows.",
       link: "https://medium.com/gopenai/multi-agent-systems-are-no-longer-just-ai-assistants-b36ca46ba276",
-      date: "2024",
+      date: "January 2026",
     },
     {
       title: "Multi-Agent Systems Are No Longer Just AI Assistants",
       description:
         "Exploring how multi-agent architectures are revolutionizing complex workflows and decision-making processes in enterprise environments.",
       link: "https://medium.com/@siddhantnitin/multi-agent-systems-are-no-longer-just-ai-assistants-b36ca46ba276",
-      date: "June 2024",
+      date: "August 2025",
     },
     {
       title: "Why Compliance-Heavy Industries Need Multi-Agent AI Architecture",
       description:
         "Deep dive into how multi-agent systems can transform regulatory compliance, risk management, and audit processes in heavily regulated industries.",
       link: "https://medium.com/@siddhantnitin/why-compliance-heavy-industries-need-multi-agent-ai-architecture-e305ba34d83d",
-      date: "May 2024",
+      date: "May 2025",
     },
     {
       title:
@@ -374,7 +423,7 @@ export const portfolioData = {
       description:
         "A comprehensive guide to engineering AI systems that work reliably in production environments, covering deployment, monitoring, and maintenance strategies.",
       link: "https://medium.com/@siddhantnitin/production-ready-ai-engineering-building-scalable-reliable-systems-that-deliver-ef8c0619e481",
-      date: "April 2024",
+      date: "April 2025",
     },
     {
       title:
@@ -382,7 +431,7 @@ export const portfolioData = {
       description:
         "Explore how artificial intelligence is transforming entry-level engineering roles and what this means for the future of software development careers.",
       link: "https://medium.com/@siddhantnitin/from-entry-level-to-obsolete-how-ai-is-rewriting-the-engineers-first-job-5bc377f89456",
-      date: "May 2024",
+      date: "May 2025",
     },
     {
       title:
@@ -390,7 +439,7 @@ export const portfolioData = {
       description:
         "A deep dive into how I built an AI-powered cybersecurity log analyzer to address the gap in business school cybersecurity education.",
       link: "https://medium.com/@siddhantnitin/cybersecurity-is-broken-in-business-schools-i-spent-6-months-fixing-it-1ce7f54d0882",
-      date: "March 2024",
+      date: "March 2025",
     },
     {
       title: "RAG PDFs in Minutes with Google Cloud's Vertex AI",
@@ -405,7 +454,7 @@ export const portfolioData = {
       description:
         "Technical deep dive into developing AI-powered eye tracking systems for medical diagnosis and impairment detection using computer vision and machine learning.",
       link: "https://medium.com/@siddhantnitin/%EF%B8%8F-%EF%B8%8F-eye-track-analysis-building-an-impairment-detection-system-with-just-eye-movements-f877bca560e0",
-      date: "February 2024",
+      date: "February 2025",
     },
     {
       title:
@@ -413,7 +462,7 @@ export const portfolioData = {
       description:
         "Analyzing how AI-powered development tools like Cursor are transforming the software development workflow and reshaping the future of coding.",
       link: "https://medium.com/@siddhantnitin/from-lines-of-code-to-conversations-how-cursor-is-rewriting-the-ide-2383a387e3d8",
-      date: "January 2024",
+      date: "January 2025",
     },
   ],
 } as const;
