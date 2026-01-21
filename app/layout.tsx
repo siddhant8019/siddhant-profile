@@ -62,10 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`!scroll-smooth ${firaCode.variable} ${playfair.variable}`}
-    >
+    <html lang="en" className={`${firaCode.variable} ${playfair.variable}`}>
       <head>
         <script
           type="application/ld+json"
