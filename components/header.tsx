@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
@@ -22,11 +21,7 @@ export default function Header() {
 
   return (
     <header className="z-[999] relative">
-      <motion.div
-        className="fixed top-0 left-0 w-full border-b border-[#7B7B7B]/20 bg-[#F8F8F8]/85 backdrop-blur-xl"
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-      >
+      <div className="fixed top-0 left-0 w-full border-b border-[#7B7B7B]/20 bg-[#F8F8F8]/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <Link
             href="/"
@@ -65,7 +60,7 @@ export default function Header() {
             Get in touch
           </Link>
         </div>
-      </motion.div>
+      </div>
 
       {/* Mobile Navigation */}
       <nav className="flex sm:hidden fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 w-full px-6 z-[1000]">
@@ -91,62 +86,45 @@ export default function Header() {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              className="fixed inset-0 bg-[#222222]/15 backdrop-blur-sm sm:hidden z-40"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={closeMobileMenu}
-            />
+      {isMobileMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-[#222222]/15 backdrop-blur-sm sm:hidden z-40"
+            onClick={closeMobileMenu}
+          />
 
-            {/* Mobile Menu */}
-            <motion.div
-              className="fixed top-[3.5rem] left-4 right-4 glass-card rounded-2xl sm:hidden z-50"
-              initial={{ opacity: 0, y: -20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
-              <ul className="p-4 space-y-2">
-                {links.map((link, index) => {
-                  const isActive =
-                    pathname === link.hash ||
-                    (pathname === "/" && link.hash === "/");
+          {/* Mobile Menu */}
+          <div className="fixed top-[3.5rem] left-4 right-4 glass-card rounded-2xl sm:hidden z-50">
+            <ul className="p-4 space-y-2">
+              {links.map((link) => {
+                const isActive =
+                  pathname === link.hash ||
+                  (pathname === "/" && link.hash === "/");
 
-                  return (
-                    <motion.li
-                      key={link.hash}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.2, delay: index * 0.05 }}
+                return (
+                  <li key={link.hash}>
+                    <Link
+                      href={link.hash}
+                      onClick={closeMobileMenu}
+                      className={clsx(
+                        "flex items-center px-4 py-3 rounded-lg text-base font-medium transition-colors",
+                        {
+                          "bg-[#7B7B7B]/20 text-[#222222]": isActive,
+                          "text-[#222222]/70 hover:bg-[#7B7B7B]/15":
+                            !isActive,
+                        }
+                      )}
                     >
-                      <Link
-                        href={link.hash}
-                        onClick={closeMobileMenu}
-                        className={clsx(
-                          "flex items-center px-4 py-3 rounded-lg text-base font-medium transition-colors",
-                          {
-                            "bg-[#7B7B7B]/20 text-[#222222]":
-                              isActive,
-                            "text-[#222222]/70 hover:bg-[#7B7B7B]/15":
-                              !isActive,
-                          }
-                        )}
-                      >
-                        {link.name}
-                      </Link>
-                    </motion.li>
-                  );
-                })}
-              </ul>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+                      {link.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </>
+      )}
     </header>
   );
 }

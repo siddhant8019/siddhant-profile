@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import {
   BsArrowRight,
   BsGithub,
@@ -149,12 +148,7 @@ export default function LeadGenerationSystemPage() {
   return (
     <main className="px-4 py-8 max-w-6xl mx-auto">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mb-12"
-      >
+      <div className="mb-12">
         <Link
           href="/work"
           className="inline-flex items-center gap-2 text-[#222222]/70 hover:text-[#222222] transition-colors mb-6"
@@ -170,15 +164,10 @@ export default function LeadGenerationSystemPage() {
           A sophisticated multi-agent system that automatically discovers,
           researches, and qualifies companies using AI-powered intelligence.
         </p>
-      </motion.div>
+      </div>
 
       {/* Metrics */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-      >
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         {metrics.map((metric, index) => (
           <div
             key={index}
@@ -195,15 +184,10 @@ export default function LeadGenerationSystemPage() {
             </div>
           </div>
         ))}
-      </motion.div>
+      </div>
 
       {/* Problem & Solution */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="grid lg:grid-cols-2 gap-8 mb-16"
-      >
+      <div className="grid lg:grid-cols-2 gap-8 mb-16">
         <div className="glass-card p-9 rounded-2xl">
           <h2 className="text-2xl font-bold text-[#222222] mb-4">
             The Challenge
@@ -226,15 +210,10 @@ export default function LeadGenerationSystemPage() {
             delivering high-quality leads in minutes instead of hours.
           </p>
         </div>
-      </motion.div>
+      </div>
 
       {/* Architecture Flow */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="mb-16"
-      >
+      <div className="mb-16">
         <h2 className="text-3xl font-bold text-[#222222] mb-8 text-center section-title">
           System Architecture
         </h2>
@@ -261,15 +240,10 @@ export default function LeadGenerationSystemPage() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Key Features */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        className="mb-16"
-      >
+      <div className="mb-16">
         <h2 className="text-3xl font-bold text-[#222222] mb-8 text-center section-title">
           Key Features
         </h2>
@@ -296,15 +270,10 @@ export default function LeadGenerationSystemPage() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Tech Stack */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="mb-16"
-      >
+      <div className="mb-16">
         <h2 className="text-3xl font-bold text-[#222222] mb-8 text-center section-title">
           Technology Stack
         </h2>
@@ -326,15 +295,10 @@ export default function LeadGenerationSystemPage() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Impact */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-        className="glass-card p-9 rounded-2xl mb-16"
-      >
+      <div className="glass-card p-9 rounded-2xl mb-16">
         <h2 className="text-3xl font-bold text-[#222222] mb-6 text-center section-title">
           Impact & Results
         </h2>
@@ -364,15 +328,10 @@ export default function LeadGenerationSystemPage() {
             </ul>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
-        className="text-center"
-      >
+      <div className="text-center">
         <div className="bg-[#222222] p-8 rounded-lg border border-[#7B7B7B]/30">
           <h2 className="text-2xl font-bold text-[#FFFFFF] mb-4">
             Interested in Building Something Similar?
@@ -389,7 +348,7 @@ export default function LeadGenerationSystemPage() {
             <BsArrowRight className="w-5 h-5" />
           </Link>
         </div>
-      </motion.div>
+      </div>
     </main>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { portfolioData } from "@/lib/data";
 import { BsMedium, BsArrowUpRight } from "react-icons/bs";
 
@@ -9,26 +8,17 @@ export default function Blog() {
   return (
     <section className="mb-16 sm:mb-28 px-4">
       <div className="max-w-4xl mx-auto">
-        <motion.h2
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#222222] section-title"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#222222] section-title">
           Writing
-        </motion.h2>
+        </h2>
 
         <div className="space-y-4 sm:space-y-6">
           {portfolioData.blog.map(
             (post, index) =>
               index < 3 && (
-                <motion.article
+                <article
                   key={index}
                   className="glass-card card-hover card-ambient p-6 sm:p-8 rounded-2xl cursor-pointer group"
-                  initial={{ opacity: 0, y: 100 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.02 }}
                 >
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <BsMedium className="text-xl sm:text-2xl text-[#222222]/80" />
@@ -53,17 +43,12 @@ export default function Blog() {
                   >
                     Read on Medium
                   </a>
-                </motion.article>
+                </article>
               )
           )}
         </div>
 
-        <motion.div
-          className="text-center mt-6 sm:mt-8"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
+        <div className="text-center mt-6 sm:mt-8">
           <a
             href="/blog"
             className="inline-flex items-center gap-2 btn-primary btn-advanced px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base"
@@ -71,7 +56,7 @@ export default function Blog() {
             View all posts
             <BsArrowUpRight className="text-sm" />
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

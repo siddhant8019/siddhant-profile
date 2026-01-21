@@ -1,55 +1,29 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { BsArrowRight, BsGithub } from "react-icons/bs";
 
 export default function FeaturedProject() {
   return (
     <section className="mb-16 sm:mb-28 px-4">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          className="gradient-panel card-hover p-10 rounded-3xl"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="gradient-panel card-hover p-10 rounded-3xl">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <motion.div
-                className="inline-flex items-center gap-2 bg-[#222222] text-[#FFFFFF] px-3 py-1 rounded-full text-sm font-medium mb-4 shadow-sm"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
+              <div className="inline-flex items-center gap-2 bg-[#222222] text-[#FFFFFF] px-3 py-1 rounded-full text-sm font-medium mb-4 shadow-sm">
                 <span>Featured Project</span>
-              </motion.div>
+              </div>
 
-              <motion.h2
-                className="text-3xl sm:text-4xl font-bold text-[#222222] mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-              >
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#222222] mb-4">
                 Multi-Agent Lead Generation System
-              </motion.h2>
+              </h2>
 
-              <motion.p
-                className="text-lg text-[#222222]/80 mb-6 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
+              <p className="text-lg text-[#222222]/80 mb-6 leading-relaxed">
                 A sophisticated AI system that automates lead discovery and qualification across 12+ data sources, 
                 delivering 3x more qualified prospects with 80% reduction in manual research time.
-              </motion.p>
+              </p>
 
-              <motion.div
-                className="grid grid-cols-2 gap-4 mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-              >
+              <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="glass-card card-ambient p-5 rounded-2xl">
                   <div className="text-2xl font-bold text-[#222222] mb-1">3x</div>
                   <div className="text-sm text-[#222222]/70">More Qualified Leads</div>
@@ -58,14 +32,9 @@ export default function FeaturedProject() {
                   <div className="text-2xl font-bold text-[#222222] mb-1">80%</div>
                   <div className="text-sm text-[#222222]/70">Less Manual Work</div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="flex flex-wrap gap-2 mb-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-              >
+              <div className="flex flex-wrap gap-2 mb-6">
                 {["CrewAI", "FastAPI", "Redis", "Weaviate", "OpenAI", "Docker"].map((tech, index) => (
                   <span
                     key={tech}
@@ -74,14 +43,9 @@ export default function FeaturedProject() {
                     {tech}
                   </span>
                 ))}
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="flex flex-col sm:flex-row gap-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-              >
+              <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/mail"
                   className="group btn-primary btn-advanced px-6 py-3 flex items-center gap-2 rounded-full"
@@ -96,15 +60,10 @@ export default function FeaturedProject() {
                   View All Projects
                   <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
                 </a>
-              </motion.div>
+              </div>
             </div>
 
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
+            <div className="relative">
               <div className="glass-card card-hover card-ambient p-7 rounded-3xl">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -134,9 +93,9 @@ export default function FeaturedProject() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
