@@ -36,7 +36,7 @@ export default function Hero() {
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-4">
         <a
-          href="/mail"
+          href={portfolioData.home.hero.primaryCta.href}
           className="group btn-primary btn-advanced px-6 py-3 sm:px-7 sm:py-3 w-full sm:w-auto flex items-center justify-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer focus:ring-2 focus:ring-[#7B7B7B]/30 focus:ring-offset-2 text-sm sm:text-base"
           aria-label="Contact me"
         >
