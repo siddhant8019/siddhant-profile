@@ -57,7 +57,7 @@ export const experiencesData = [
     location: "Palo Alto, CA",
     description:
       "Humancloud build and deploy AI systems for enterprises — everything from fine-tuning large language models (LLMs) and setting up retrieval-augmented generation (RAG) pipelines, to building multi-agent workflows, cloud infrastructure for ML operations (MLOps), and governance frameworks.",
-    icon: React.createElement(FaReact, { className: "text-blue-500" }),
+    icon: React.createElement(FaReact, { className: "text-[#7B7B7B]" }),
   },
   {
     title: "AI & Cloud Facilitator",
@@ -66,7 +66,7 @@ export const experiencesData = [
     location: "India",
     description:
       "Led hands-on sessions on AI/ML APIs, GCP services, and containerized deployment. Helped 2000+ students build real-world AI applications and achieve Google Cloud certifications.",
-    icon: React.createElement(SiGooglecloud, { className: "text-[#4285F4]" }),
+    icon: React.createElement(SiGooglecloud, { className: "text-[#7B7B7B]" }),
   },
 ] as const;
 
@@ -312,6 +312,48 @@ export const portfolioData = {
       "https://drive.google.com/file/d/1UOeLtTotuDFfFq7ul-hgXzf7DP1AB6UW/view?usp=sharing",
   },
   blog: [
+    {
+      title: "Google Is Betting On You. OpenAI Is Betting On Everyone",
+      description:
+        "A perspective on how big tech bets shape builders, talent, and the future of AI distribution.",
+      link: "https://medium.com/@siddhantnitin/google-is-betting-on-you-openai-is-betting-on-everyone-16860cef91e8",
+      date: "2024",
+    },
+    {
+      title: "DeepSeek’s Engram Is a Bigger Deal Than Bigger Models",
+      description:
+        "Why memory and retrieval breakthroughs may matter more than sheer model size.",
+      link: "https://medium.com/gopenai/deepseeks-engram-is-a-bigger-deal-than-bigger-models-e361a5ae356f",
+      date: "2024",
+    },
+    {
+      title: "GLM-4.7 and the Big Three",
+      description:
+        "Comparing frontier models and what the next tier of capabilities means for teams.",
+      link: "https://medium.com/gopenai/glm-4-7-and-the-big-three-593877d6c761",
+      date: "2024",
+    },
+    {
+      title: "The Quiet Shift in Automation",
+      description:
+        "How automation is evolving beyond tools into autonomous, coordinated systems.",
+      link: "https://medium.com/gopenai/the-quiet-shift-in-automation-5a8975957cda",
+      date: "2024",
+    },
+    {
+      title: "Turn Web Pages into CRM Data for Sales Partnerships",
+      description:
+        "A practical blueprint for transforming web data into structured CRM insights.",
+      link: "https://medium.com/siddhants-ai-lab/turn-web-pages-into-crm-data-for-sales-partnerships-3e40c4ed0b98",
+      date: "2024",
+    },
+    {
+      title: "Multi-Agent Systems Are No Longer Just AI Assistants",
+      description:
+        "Why multi-agent systems are evolving into orchestrated, goal-driven workflows.",
+      link: "https://medium.com/gopenai/multi-agent-systems-are-no-longer-just-ai-assistants-b36ca46ba276",
+      date: "2024",
+    },
     {
       title: "Multi-Agent Systems Are No Longer Just AI Assistants",
       description:

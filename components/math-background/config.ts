@@ -31,8 +31,8 @@ export const MATH_BG_CONFIG = {
   /** Line thickness in pixels */
   lineWidth: 0.9,
 
-  /** Line color - dark olive to match site's accent and be visible on #f6f9f1 */
-  lineColor: "20, 30, 20", // RGB format - darker olive green
+  /** Line color - primary tone to be visible on #F8F8F8 */
+  lineColor: "34, 34, 34", // RGB format - primary charcoal
 
   // === GLOW EFFECT ===
   /** Enable subtle center glow */
@@ -41,8 +41,8 @@ export const MATH_BG_CONFIG = {
   /** Glow intensity (0-1) */
   glowIntensity: 0.08,
 
-  /** Glow color - olive tint */
-  glowColor: "90, 100, 70", // RGB format
+  /** Glow color - secondary tint */
+  glowColor: "123, 123, 123", // RGB format
 
   // === POSITION ===
   /** Horizontal offset from center (fraction of width, -1 to 1) */

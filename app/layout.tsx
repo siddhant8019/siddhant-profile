@@ -1,7 +1,6 @@
 import Header from "@/components/header";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import { Fira_Code } from "next/font/google";
+import { Inter, Fira_Code, Playfair_Display } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeContextProvider from "@/context/theme-context";
@@ -15,6 +14,11 @@ const firaCode = Fira_Code({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-fira-code",
+});
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
 });
 
 export const metadata = {
@@ -58,7 +62,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`!scroll-smooth ${firaCode.variable}`}>
+    <html
+      lang="en"
+      className={`!scroll-smooth ${firaCode.variable} ${playfair.variable}`}
+    >
       <head>
         <script
           type="application/ld+json"
@@ -101,7 +108,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} bg-[#f6f9f1] text-[#000000] relative pt-16 sm:pt-28 md:pt-36`}
+        className={`${inter.className} bg-[#F8F8F8] text-[#222222] relative pt-16 sm:pt-28 md:pt-36`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

@@ -10,7 +10,7 @@ export default function Blog() {
     <section className="mb-16 sm:mb-28 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.h2
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#000000]"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#222222] section-title"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -24,24 +24,24 @@ export default function Blog() {
               index < 3 && (
                 <motion.article
                   key={index}
-                  className="bg-white p-4 sm:p-6 rounded-lg border border-[#dae2e2] hover:shadow-xl hover:scale-105 hover:-translate-y-2 transition-all duration-300 cursor-pointer group"
+                  className="glass-card card-hover card-ambient p-6 sm:p-8 rounded-2xl cursor-pointer group"
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <BsMedium className="text-xl sm:text-2xl text-[#000000]/80" />
-                    <span className="text-xs sm:text-sm text-[#000000]/70">
+                    <BsMedium className="text-xl sm:text-2xl text-[#222222]/80" />
+                    <span className="text-xs sm:text-sm text-[#222222]/70">
                       {post.date}
                     </span>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-semibold text-[#000000] mb-3">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[#222222] mb-3">
                     {post.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-[#000000]/80 leading-relaxed mb-4">
+                  <p className="text-sm sm:text-base text-[#222222]/80 leading-relaxed mb-4">
                     {post.description}
                   </p>
 
@@ -49,7 +49,7 @@ export default function Blog() {
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs sm:text-sm text-[#000000]/70 hover:text-[#000000] transition-colors"
+                    className="text-xs sm:text-sm text-[#222222]/70 hover:text-[#222222] transition-colors"
                   >
                     Read on Medium
                   </a>
@@ -66,7 +66,7 @@ export default function Blog() {
         >
           <a
             href="/blog"
-            className="inline-flex items-center gap-2 bg-[#000000] text-[#f6f9f1] px-5 py-2.5 sm:px-6 sm:py-3 rounded-full hover:bg-[#000000]/90 transition-colors border border-[#dae2e2] text-sm sm:text-base"
+            className="inline-flex items-center gap-2 btn-primary btn-advanced px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base"
           >
             View all posts
             <BsArrowUpRight className="text-sm" />

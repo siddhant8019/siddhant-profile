@@ -1,14 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000; /* solid black background, images removed */
-  color: white;
+  background-color: #222222; /* solid primary background, images removed */
+  color: #FFFFFF;
   font-size: 14px;
   font-family: sans-serif;
   overflow: auto;
 }
 a {
-  color: white;
+  color: #FFFFFF;
   font-size: 14px;
 }
 #main {
@@ -30,7 +30,7 @@ a {
 }
 #code {
   display: none;
-  color: rgb(196, 255, 255);
+  color: #7B7B7B;
   font-size: 16px;
   margin-top: 70px;
   line-height: 25px;

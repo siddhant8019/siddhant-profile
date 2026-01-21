@@ -9,7 +9,7 @@ export default function Services() {
     <section className="mb-16 sm:mb-28 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.h2
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#000000]"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#222222] section-title"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -21,15 +21,15 @@ export default function Services() {
           {portfolioData.home.services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-white p-4 sm:p-6 rounded-lg border border-[#dae2e2] hover:shadow-lg transition-shadow"
+              className="glass-card card-hover card-ambient p-6 sm:p-8 rounded-2xl"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-[#000000]">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-[#222222]">
                 {service.title}
               </h3>
-              <p className="text-sm sm:text-base leading-relaxed text-[#000000]/80">
+              <p className="text-sm sm:text-base leading-relaxed text-[#222222]/80">
                 {service.body}
               </p>
             </motion.div>

@@ -21,10 +21,10 @@ export default function Experience() {
   return (
     <main className="px-4 py-8 max-w-4xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000000] mb-4">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#222222] mb-4 section-title">
           Experience
         </h1>
-        <p className="text-lg sm:text-xl text-[#000000]/80 leading-relaxed">
+        <p className="text-lg sm:text-xl text-[#222222]/80 leading-relaxed">
           Building AI products and intelligent systems across different
           organizations.
         </p>
@@ -34,7 +34,7 @@ export default function Experience() {
         {experiencesData.map((experience, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg border border-[#dae2e2] hover:shadow-lg transition-shadow"
+            className="glass-card card-hover card-ambient p-7 rounded-2xl"
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
               <div className="flex items-start gap-4 flex-1">
@@ -45,7 +45,7 @@ export default function Experience() {
                   }
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 w-12 h-12 bg-white rounded-lg border border-[#dae2e2] flex items-center justify-center hover:shadow-md hover:scale-105 transition-all duration-200 cursor-pointer"
+                  className="flex-shrink-0 w-12 h-12 bg-[#FFFFFF] rounded-xl border border-[#7B7B7B]/30 flex items-center justify-center hover:shadow-md hover:scale-105 transition-all duration-200 cursor-pointer"
                   aria-label={`Visit ${experience.company} website`}
                 >
                   {companyLogos[
@@ -63,8 +63,8 @@ export default function Experience() {
                       className="object-contain"
                     />
                   ) : (
-                    <div className="w-8 h-8 bg-[#dae2e2] rounded flex items-center justify-center">
-                      <span className="text-xs font-bold text-[#000000]">
+                    <div className="w-8 h-8 bg-[#7B7B7B]/20 rounded flex items-center justify-center">
+                      <span className="text-xs font-bold text-[#222222]">
                         {experience.company.charAt(0)}
                       </span>
                     </div>
@@ -72,13 +72,13 @@ export default function Experience() {
                 </a>
 
                 <div className="flex-1">
-                  <h2 className="text-lg sm:text-xl font-semibold text-[#000000] mb-1">
+                  <h2 className="text-lg sm:text-xl font-semibold text-[#222222] mb-1">
                     {experience.title}
                   </h2>
-                  <p className="text-base sm:text-lg text-[#000000]/70 mb-2">
+                  <p className="text-base sm:text-lg text-[#222222]/70 mb-2">
                     {experience.company}
                   </p>
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs sm:text-sm text-[#000000]/70">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs sm:text-sm text-[#222222]/70">
                     <span>{experience.dates}</span>
                     <span className="hidden sm:inline">•</span>
                     <span>{experience.location}</span>
@@ -88,7 +88,7 @@ export default function Experience() {
             </div>
 
             <div className="mt-4">
-              <p className="text-sm sm:text-base text-[#000000]/80 leading-relaxed">
+              <p className="text-sm sm:text-base text-[#222222]/80 leading-relaxed">
                 {experience.description}
               </p>
             </div>

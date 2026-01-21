@@ -23,66 +23,62 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[3.5rem] w-full rounded-none border border-[#dae2e2] border-opacity-40 bg-[#f6f9f1] shadow-lg shadow-black/[0.03] sm:top-6 sm:h-[3.25rem] sm:w-[44rem] sm:rounded-full"
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
+        className="fixed top-0 left-0 w-full border-b border-[#7B7B7B]/20 bg-[#F8F8F8]/85 backdrop-blur-xl"
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+      >
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <Link
+            href="/"
+            className="text-xs sm:text-base font-semibold tracking-[0.35em] uppercase text-[#222222]"
+          >
+            Siddhant
+          </Link>
 
-      {/* Desktop Navigation */}
-      <nav className="hidden sm:flex fixed top-[1.7rem] left-1/2 h-[initial] -translate-x-1/2 py-0">
-        <ul className="flex w-[40rem] items-center justify-center gap-8 text-[0.9rem] font-medium text-[#000000]/70">
-          {links.map((link) => {
-            const isActive =
-              pathname === link.hash || (pathname === "/" && link.hash === "/");
+          <nav className="hidden sm:flex">
+            <ul className="flex items-center gap-10 text-sm sm:text-base font-medium tracking-wide text-[#222222]/70">
+              {links.map((link) => {
+                const isActive =
+                  pathname === link.hash ||
+                  (pathname === "/" && link.hash === "/");
 
-            return (
-              <motion.li
-                className="h-3/4 flex items-center justify-center relative"
-                key={link.hash}
-                initial={{ y: -100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-              >
-                <Link
-                  className={clsx(
-                    "flex w-full items-center justify-center px-3 py-3 hover:text-[#000000] transition",
-                    {
-                      "text-[#000000]": isActive,
-                    }
-                  )}
-                  href={link.hash}
-                >
-                  {link.name}
+                return (
+                  <li key={link.hash}>
+                    <Link
+                      className={clsx("nav-link hover:text-[#222222]", {
+                        "is-active text-[#222222]": isActive,
+                      })}
+                      href={link.hash}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
 
-                  {isActive && (
-                    <motion.span
-                      className="bg-[#dae2e2] rounded-full absolute inset-0 -z-10"
-                      layoutId="activeSection"
-                      transition={{
-                        type: "spring",
-                        stiffness: 380,
-                        damping: 30,
-                      }}
-                    ></motion.span>
-                  )}
-                </Link>
-              </motion.li>
-            );
-          })}
-        </ul>
-      </nav>
+          <Link
+            href="/contact"
+            className="hidden sm:inline-flex text-sm sm:text-base text-[#222222]/70 hover:text-[#222222] transition-colors"
+          >
+            Get in touch
+          </Link>
+        </div>
+      </motion.div>
 
       {/* Mobile Navigation */}
-      <nav className="flex sm:hidden fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 w-full px-4 z-[1000]">
+      <nav className="flex sm:hidden fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 w-full px-6 z-[1000]">
         <div className="flex w-full items-center justify-between">
           {/* Logo/Brand */}
-          <div className="text-base font-bold text-[#000000]">
-            Look around
+          <div className="text-xs font-semibold tracking-[0.35em] uppercase text-[#222222]">
+            Siddhant
           </div>
 
           {/* Hamburger Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="p-2 rounded-lg bg-[#dae2e2] text-[#000000] hover:bg-[#dae2e2]/80 transition-colors"
+            className="p-2 rounded-lg bg-[#7B7B7B]/20 text-[#222222] hover:bg-[#7B7B7B]/30 transition-colors"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? (
@@ -100,7 +96,7 @@ export default function Header() {
           <>
             {/* Backdrop */}
             <motion.div
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm sm:hidden z-40"
+              className="fixed inset-0 bg-[#222222]/15 backdrop-blur-sm sm:hidden z-40"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -109,7 +105,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             <motion.div
-              className="fixed top-[3.5rem] left-4 right-4 bg-[#f6f9f1] rounded-2xl shadow-lg border border-[#dae2e2] sm:hidden z-50"
+              className="fixed top-[3.5rem] left-4 right-4 glass-card rounded-2xl sm:hidden z-50"
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -134,9 +130,9 @@ export default function Header() {
                         className={clsx(
                           "flex items-center px-4 py-3 rounded-lg text-base font-medium transition-colors",
                           {
-                            "bg-[#dae2e2] text-[#000000]":
+                            "bg-[#7B7B7B]/20 text-[#222222]":
                               isActive,
-                            "text-[#000000]/70 hover:bg-[#dae2e2]/50":
+                            "text-[#222222]/70 hover:bg-[#7B7B7B]/15":
                               !isActive,
                           }
                         )}
