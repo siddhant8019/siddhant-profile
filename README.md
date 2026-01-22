@@ -1,44 +1,37 @@
-# 🚀 Siddhant Patil’s Portfolio
-
-> _“Building the future, one line of code at a time”_
+# Siddhant Patil’s Portfolio
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-online-brightgreen)](https://siprofile.me)  
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ---
 
-## 👋 About Me
+## About
 
-I’m **Siddhant Patil**, a Full‑Stack Engineer & AI/ML enthusiast graduated in masters from California State University Long Beach in Computer Science. As a Research Assistant, I bridge cutting‑edge deep learning research with polished end‑user experiences. When I’m not architecting scalable web apps, you’ll find me optimizing ML pipelines or hunting down the perfect cup of coffee in LA.
-
----
-
-## 🔍 What You’ll Find Here
-
-- 🎨 **Sleek, lightning‑fast UI** built with Next.js & React
-- 🤖 **AI/ML demos** showcasing my work in eye‑tracking impairment detection, RAG‑powered Document Q&A, and more
-- 📄 **Downloadable Resume** & **Contact** form—drop me a line, spam‑free
+I build agentic AI systems that replace manual work, not demo well and die later. This site highlights production-focused projects, systems thinking, and how I approach reliability, evaluation, and failure handling.
 
 ---
 
-## 🛠️ Tech Stack & Highlights
+## What You’ll Find Here
 
-| Frontend                            | Backend & API        | AI/ML & Data          | DevOps & Hosting |
-| :---------------------------------- | :------------------- | :-------------------- | :--------------- |
-| Next.js 13 & React 18               | Node.js & Express.js | TensorFlow, PyTorch   | Vercel           |
-| TypeScript & Tailwind CSS           | GraphQL & REST       | Scikit‑Learn, XGBoost | GitHub Actions   |
-| Framer Motion & Tailwind Animations | PostgreSQL, MongoDB  | OpenAI & Vertex AI    | Docker           |
-
-- **SSR & ISR:** Blazing page loads with Next.js
-- **Dark/Light Mode:** Auto‑detects your system theme
-- **Spam‑Protected Contact:** Nodemailer + simple captcha
-- **Fully Responsive:** Pixel‑perfect on mobile, tablet, & desktop
+- **Selected work** with outcomes, hooks, and production context
+- **Writing** on agentic systems, evaluation, and real-world AI delivery
+- **Contact** and resume links
 
 ---
 
-## 📂 Featured Projects
+## Tech Stack
 
-### 1. EyeTrack Impairment Detector
+| Frontend                | Backend & API        | AI/ML & Retrieval     | Infra & Hosting |
+| :---------------------- | :------------------- | :-------------------- | :-------------- |
+| Next.js & React         | Node.js & Express.js | OpenAI, LangChain     | Vercel          |
+| TypeScript & Tailwind   | REST APIs            | Weaviate, FAISS       | Docker          |
+|                         | PostgreSQL           | RAG systems           | GitHub Actions  |
+
+---
+
+## Featured Projects
+
+### EyeTrack Impairment Detector
 
 > Real‑time alcohol impairment prediction using just your eye movements.
 
@@ -46,7 +39,7 @@ I’m **Siddhant Patil**, a Full‑Stack Engineer & AI/ML enthusiast graduated i
 - Trained XGBoost & RandomForest models achieving **85%+ accuracy**
 - Live demo uses WebSockets to stream data from an eye‑tracker to a Next.js dashboard
 
-### 2. AI‑Powered Document Q&A
+### AI‑Powered Document Q&A
 
 > Ask complex questions of PDFs in natural language.
 
@@ -58,7 +51,7 @@ For the full project list, check out the **Work** section on the site!
 
 ---
 
-## 🚀 Get Started Locally
+## Get Started Locally
 
 ```bash
 # 1. Clone the repo
