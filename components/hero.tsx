@@ -10,7 +10,6 @@ export default function Hero() {
   return (
     <section className="text-center px-4 py-8 sm:py-16 mb-16 sm:mb-28 relative">
       <div className="absolute left-1/2 top-6 -z-10 h-40 w-40 -translate-x-1/2 rounded-full bg-[#FFFFFF] blur-3xl opacity-80" />
-      <div className="section-kicker mb-4">Portfolio</div>
       <div className="text-3xl sm:text-6xl gradient-text mb-4 font-medium">
         {portfolioData.home.hero.name}
       </div>
