@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💘 Plans</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #ffe6f0, #ffd3a5);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.92);
+        padding: 28px 26px;
+        border-radius: 18px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+        text-align: center;
+        width: min(92vw, 520px);
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 26px;
+        color: #2b2b2b;
+      }
+      p {
+        margin: 0 0 18px;
+        color: #444;
+        font-size: 16px;
+      }
+      .options {
+        display: grid;
+        gap: 12px;
+        margin-top: 14px;
+      }
+      .opt {
+        border: none;
+        border-radius: 14px;
+        padding: 14px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        background: #6c5ce7;
+        color: white;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+        transition: transform 0.12s ease;
+      }
+      .opt:hover {
+        transform: translateY(-2px);
+      }
+      .result {
+        margin-top: 16px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        background: #f6f6ff;
+        color: #2b2b2b;
+        display: none;
+      }
+      .small {
+        font-size: 12px;
+        color: #666;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Yay! 💖 What are we doing?</h1>
+      <p>Pick one option below:</p>
+
+      <div class="options">
+        <button class="opt" onclick="pick('Coffee')">Coffee☕️</button>
+        <button class="opt" onclick="pick('Dinner')">Dinner🍽️</button>
+        <button class="opt" onclick="pick('Movie')">Movie🎥</button>
+      </div>
+
+      <div class="result" id="result"></div>
+      <!-- <div class="small">P.S. You can rename A/B/C to real plans 🙂</div> -->
+    </div>
+
+    <script>
+      function pick(option) {
+        const box = document.getElementById("result");
+        box.style.display = "block";
+        box.innerHTML = `You chose <b>${option}</b> 😍<br/>Okayyy… locking it in! 💘`;
+      }
+    </script>
+  </body>
+</html>
