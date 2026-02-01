@@ -11,6 +11,7 @@
 # next.js
 /.next/
 /out/
+/chai_sequence/
 
 # production
 /build
