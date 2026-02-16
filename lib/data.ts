@@ -362,6 +362,48 @@ export const portfolioData = {
   },
   blog: [
     {
+      title: "Clawdbot Was the Prototype. OpenClaw Is the Interface War",
+      description:
+        "Why the real battle in AI is shifting from models to interfaces — and what OpenClaw means for builders. Published in Towards Artificial Intelligence.",
+      link: "https://medium.com/towards-artificial-intelligence/clawdbot-was-the-prototype-openclaw-is-the-interface-war-aafcb68c6979",
+      date: "2025",
+    },
+    {
+      title: "How Microsoft's Optimind Unlocks Optimization for the Rest of Us",
+      description:
+        "How Optimind makes advanced optimization accessible beyond research labs and what it means for practical AI systems.",
+      link: "https://medium.com/@siddhantnitin/how-microsofts-optimind-unlocks-optimization-for-the-rest-of-us-d745abff99ea",
+      date: "2025",
+    },
+    {
+      title: "Clawdbot, Moltbot: Why This AI Isn't a Chatbot — It's an Operator",
+      description:
+        "Exploring why the next wave of AI isn't about chat interfaces but about systems that operate and execute in the real world.",
+      link: "https://medium.com/@siddhantnitin/clawdbot-moltbot-why-this-ai-isnt-a-chatbot-it-s-an-operator-216a3381ab53",
+      date: "2025",
+    },
+    {
+      title: "The AI Model Wars Are Over. The Interface Wars Just Started.",
+      description:
+        "Why the frontier has shifted from who has the biggest model to who builds the interfaces that people actually use.",
+      link: "https://medium.com/@siddhantnitin/the-ai-model-wars-are-over-the-interface-wars-just-started-a185e11126fb",
+      date: "2025",
+    },
+    {
+      title: "GLM-5 Is Not Just Bigger — It's More Disciplined",
+      description:
+        "What makes GLM-5 a different kind of leap: discipline, efficiency, and readiness for production.",
+      link: "https://medium.com/@siddhantnitin/glm-5-is-not-just-bigger-its-more-disciplined-eb28edc85895",
+      date: "2025",
+    },
+    {
+      title: "GPT-5.3, Codex, and GPT-5.3 Codex Spark: Why This Launch Changes How We Build",
+      description:
+        "How the latest OpenAI launch reshapes the stack for AI engineers and product builders.",
+      link: "https://medium.com/@siddhantnitin/gpt-5-3-codex-and-gpt-5-3-codex-spark-why-this-launch-changes-how-we-build-22bbfd1be850",
+      date: "2025",
+    },
+    {
       title: "Google Is Betting On You. OpenAI Is Betting On Everyone",
       description:
         "A perspective on how big tech bets shape builders, talent, and the future of AI distribution.",

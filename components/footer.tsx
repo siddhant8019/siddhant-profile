@@ -1,6 +1,6 @@
 import React from "react";
 import { portfolioData } from "@/lib/data";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsMedium } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
 import Link from "next/link";
 
@@ -51,6 +51,15 @@ export default function Footer() {
                   aria-label="GitHub"
                 >
                   <BsGithub className="text-lg" />
+                </a>
+                <a
+                  href="https://medium.com/@siddhantnitin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-10 w-10 rounded-full border border-[#F8F8F8]/20 flex items-center justify-center text-[#F8F8F8]/70 hover:text-[#F8F8F8] hover:border-[#F8F8F8]/50 transition-colors"
+                  aria-label="Medium"
+                >
+                  <BsMedium className="text-lg" />
                 </a>
               </div>
               <div className="text-sm sm:text-base text-[#F8F8F8]/60">
