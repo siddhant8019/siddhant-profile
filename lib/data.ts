@@ -404,6 +404,13 @@ export const portfolioData = {
       date: "2025",
     },
     {
+      title: "Gemini 3 Deep Think",
+      description:
+        "What Google's deep-thinking Gemini 3 capability means for reasoning, long-horizon tasks, and how we build with frontier models.",
+      link: "https://medium.com/@siddhantnitin/gemini-3-deep-think-0c7cbd4d7587",
+      date: "2025",
+    },
+    {
       title: "Google Is Betting On You. OpenAI Is Betting On Everyone",
       description:
         "A perspective on how big tech bets shape builders, talent, and the future of AI distribution.",
