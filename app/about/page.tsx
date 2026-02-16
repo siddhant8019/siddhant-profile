@@ -20,7 +20,7 @@ export default function About() {
           <div className="flex-shrink-0">
             <div className="relative w-48 h-48 mx-auto md:mx-0">
               <Image
-                src="/profile.jpeg"
+                src="/profile.png"
                 alt="Siddhant Patil"
                 fill
                 className="rounded-2xl object-cover border-2 border-[#7B7B7B]/30"
