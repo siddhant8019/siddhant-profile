@@ -170,7 +170,7 @@ export default function MailPage() {
 
           {/* Submit Button */}
           <div className="pt-4">
-            <SubmitBtn />
+            <SubmitBtn pending={isLoading} />
           </div>
         </form>
 

@@ -1,13 +1,7 @@
-import Header from "@/components/header";
 import "./globals.css";
 import { Archivo, Space_Grotesk, Fira_Code } from "next/font/google";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import FooterWrapper from "@/components/footer-wrapper";
-import ThemeContextProvider from "@/context/theme-context";
-import InteractiveBackground from "@/components/interactive-background";
-import { Toaster } from "react-hot-toast";
+import ClientProviders from "@/components/client-providers";
 import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -113,17 +107,7 @@ export default function RootLayout({
       <body
         className={`${archivo.className} bg-[#F5F4F0] text-[#1a1a1a] relative pt-16 sm:pt-28 md:pt-36`}
       >
-        <ThemeContextProvider>
-          <ActiveSectionContextProvider>
-            <InteractiveBackground />
-            <div className="relative z-10">
-              <Header />
-              {children}
-              <FooterWrapper />
-            </div>
-            <Toaster position="top-right" />
-          </ActiveSectionContextProvider>
-        </ThemeContextProvider>
+        <ClientProviders>{children}</ClientProviders>
         <Analytics />
       </body>
     </html>
