@@ -8,7 +8,7 @@ export default function SubmitBtn() {
   return (
     <button
       type="submit"
-      className="group btn-primary btn-advanced flex items-center justify-center gap-2 h-[3rem] w-[8rem] rounded-full outline-none transition-all focus:scale-110 hover:scale-110 active:scale-105 disabled:scale-100 disabled:opacity-65"
+      className="group btn-primary btn-advanced flex items-center justify-center gap-2 h-[3rem] w-[8rem] rounded-[4px] outline-none transition-[transform,box-shadow] duration-500 ease-fluid focus:ring-2 focus:ring-[#1a1a1a]/20 focus:ring-offset-2 disabled:scale-100 disabled:opacity-65"
       disabled={pending}
     >
       {pending ? (
@@ -16,7 +16,7 @@ export default function SubmitBtn() {
       ) : (
         <>
           Submit{" "}
-          <FaPaperPlane className="text-xs opacity-80 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
+          <FaPaperPlane className="text-xs opacity-80 transition-transform duration-500 ease-fluid group-hover:translate-x-0.5" />
         </>
       )}
     </button>

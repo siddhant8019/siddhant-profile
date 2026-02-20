@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <section className="mb-16 sm:mb-28 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#222222] section-title">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#1a1a1a] section-title">
           What I do
         </h2>
 
@@ -15,12 +15,12 @@ export default function Services() {
           {portfolioData.home.services.map((service, index) => (
             <div
               key={index}
-              className="glass-card card-hover card-ambient p-6 sm:p-8 rounded-2xl"
+              className="glass-card card-hover card-ambient p-6 sm:p-8 rounded-[6px]"
             >
-              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-[#222222]">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-[#1a1a1a]">
                 {service.title}
               </h3>
-              <p className="text-sm sm:text-base leading-relaxed text-[#222222]/80">
+              <p className="text-sm sm:text-base leading-relaxed text-[#1a1a1a]/80">
                 {service.body}
               </p>
             </div>

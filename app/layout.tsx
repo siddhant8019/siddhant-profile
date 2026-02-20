@@ -1,24 +1,30 @@
 import Header from "@/components/header";
 import "./globals.css";
-import { Inter, Fira_Code, Playfair_Display } from "next/font/google";
+import { Archivo, Space_Grotesk, Fira_Code } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
-import Footer from "@/components/footer";
+import FooterWrapper from "@/components/footer-wrapper";
 import ThemeContextProvider from "@/context/theme-context";
 import InteractiveBackground from "@/components/interactive-background";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
+const archivo = Archivo({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-archivo",
+});
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
 const firaCode = Fira_Code({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-fira-code",
-});
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-playfair",
 });
 
 export const metadata = {
@@ -62,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${firaCode.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${spaceGrotesk.variable} ${firaCode.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -105,7 +111,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} bg-[#F8F8F8] text-[#222222] relative pt-16 sm:pt-28 md:pt-36`}
+        className={`${archivo.className} bg-[#F5F4F0] text-[#1a1a1a] relative pt-16 sm:pt-28 md:pt-36`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
@@ -113,7 +119,7 @@ export default function RootLayout({
             <div className="relative z-10">
               <Header />
               {children}
-              <Footer />
+              <FooterWrapper />
             </div>
             <Toaster position="top-right" />
           </ActiveSectionContextProvider>

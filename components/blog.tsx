@@ -8,10 +8,10 @@ export default function Blog() {
   return (
     <section className="mb-16 sm:mb-28 px-4">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 sm:mb-4 text-[#222222] section-title">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 sm:mb-4 text-[#1a1a1a] section-title">
           Writing
         </h2>
-        <p className="text-sm sm:text-base text-center text-[#222222]/70 mb-8 sm:mb-12 max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-center text-[#1a1a1a]/70 mb-8 sm:mb-12 max-w-2xl mx-auto">
           Notes from building systems that didn’t work the first time.
         </p>
 
@@ -21,20 +21,20 @@ export default function Blog() {
               index < 3 && (
                 <article
                   key={index}
-                  className="glass-card card-hover card-ambient p-6 sm:p-8 rounded-2xl cursor-pointer group"
+                  className="glass-card card-hover card-ambient p-6 sm:p-8 rounded-[6px] cursor-pointer group"
                 >
                   <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <BsMedium className="text-xl sm:text-2xl text-[#222222]/80" />
-                    <span className="text-xs sm:text-sm text-[#222222]/70">
+                    <BsMedium className="text-xl sm:text-2xl text-[#1a1a1a]/80" />
+                    <span className="text-xs sm:text-sm text-[#1a1a1a]/70">
                       {post.date}
                     </span>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-semibold text-[#222222] mb-3">
+                  <h3 className="text-lg sm:text-xl font-semibold text-[#1a1a1a] mb-3">
                     {post.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-[#222222]/80 leading-relaxed mb-4">
+                  <p className="text-sm sm:text-base text-[#1a1a1a]/80 leading-relaxed mb-4">
                     {post.description}
                   </p>
 
@@ -42,7 +42,7 @@ export default function Blog() {
                     href={post.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs sm:text-sm text-[#222222]/70 hover:text-[#222222] transition-colors"
+                    className="text-xs sm:text-sm text-[#1a1a1a]/70 hover:text-[#1a1a1a] transition-colors duration-500 ease-fluid cursor-pointer"
                   >
                     Read on Medium
                   </a>
@@ -54,7 +54,7 @@ export default function Blog() {
         <div className="text-center mt-6 sm:mt-8">
           <a
             href="/blog"
-            className="inline-flex items-center gap-2 btn-primary btn-advanced px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base"
+            className="inline-flex items-center gap-2 btn-primary btn-advanced px-5 py-2.5 sm:px-6 sm:py-3 rounded-[4px] text-sm sm:text-base"
           >
             View all posts
             <BsArrowUpRight className="text-sm" />

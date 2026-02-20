@@ -73,15 +73,17 @@ export default function Work() {
               </div>
             </div>
 
-            <div>
-              <a
-                href={project.link.href}
-                className="inline-flex items-center gap-2 btn-primary btn-advanced px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base"
-              >
-                {project.link.label}
-                <BsArrowRight />
-              </a>
-            </div>
+            {project.link && (
+              <div>
+                <a
+                  href={project.link.href}
+                  className="inline-flex items-center gap-2 btn-primary btn-advanced px-5 py-2.5 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base"
+                >
+                  {project.link.label}
+                  <BsArrowRight />
+                </a>
+              </div>
+            )}
           </div>
         ))}
       </div>

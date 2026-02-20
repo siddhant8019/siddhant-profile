@@ -35,7 +35,7 @@ export const experiencesData = [
   {
     title: "Co-Founder (AI Engineer)",
     company: "Teamcast.ai",
-    dates: "Aug 2025 – Present",
+    dates: "May 2025 – Present",
     location: "Palo Alto, CA",
     description:
       "Building intelligent hiring systems with multi-agent evaluation pipelines, adaptive interviews, and AI-powered candidate scoring. Focused on creating AI products that help teams move from 300+ applicants to a decisive short list with better signal quality.",
@@ -190,10 +190,7 @@ export const projectsData = [
       "Automated policy checks with agent verdicts and immutable logs.",
     credibility: "In production. Used daily. Evaluated continuously.",
     stack: ["FastAPI", "PostgreSQL", "Redis Streams", "Vector store"],
-    link: {
-      label: "View architecture notes",
-      href: "/docs/complianceguard.pdf",
-    },
+    link: null,
   },
 ] as const;
 

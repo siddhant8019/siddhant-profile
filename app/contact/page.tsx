@@ -1,5 +1,5 @@
 import { portfolioData } from "@/lib/data";
-import { BsLinkedin, BsGithub, BsFileEarmarkText } from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsMedium, BsFileEarmarkText } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
 
 export default function Contact() {
@@ -19,15 +19,15 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-6">
           <div>
             <h2 className="text-xl sm:text-2xl font-semibold text-[#222222] mb-6 section-title">
-              Get in touch
+              Ping ME
             </h2>
 
             <div className="space-y-4">
               <a
                 href="/mail"
-                className="flex items-center gap-3 text-[#222222]/80 hover:text-[#222222] transition-colors group"
+                className="flex items-center gap-3 text-[#222222]/80 hover:text-[#222222] transition-colors duration-500 ease-fluid group"
               >
-                <div className="p-2 bg-[#7B7B7B]/20 rounded-xl group-hover:bg-[#7B7B7B]/30 transition-colors">
+                <div className="p-2 bg-[#7B7B7B]/20 rounded-xl group-hover:bg-[#7B7B7B]/30 transition-colors duration-500 ease-fluid">
                   <HiMail className="text-lg" />
                 </div>
                 <div>
@@ -42,9 +42,9 @@ export default function Contact() {
                 href={portfolioData.contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#222222]/80 hover:text-[#222222] transition-colors group"
+                className="flex items-center gap-3 text-[#222222]/80 hover:text-[#222222] transition-colors duration-500 ease-fluid group"
               >
-                <div className="p-2 bg-[#7B7B7B]/20 rounded-xl group-hover:bg-[#7B7B7B]/30 transition-colors">
+                <div className="p-2 bg-[#7B7B7B]/20 rounded-xl group-hover:bg-[#7B7B7B]/30 transition-colors duration-500 ease-fluid">
                   <BsLinkedin className="text-lg" />
                 </div>
                 <div>
@@ -59,9 +59,9 @@ export default function Contact() {
                 href={portfolioData.contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#222222]/80 hover:text-[#222222] transition-colors group"
+                className="flex items-center gap-3 text-[#222222]/80 hover:text-[#222222] transition-colors duration-500 ease-fluid group"
               >
-                <div className="p-2 bg-[#7B7B7B]/20 rounded-xl group-hover:bg-[#7B7B7B]/30 transition-colors">
+                <div className="p-2 bg-[#7B7B7B]/20 rounded-xl group-hover:bg-[#7B7B7B]/30 transition-colors duration-500 ease-fluid">
                   <BsGithub className="text-lg" />
                 </div>
                 <div>
@@ -76,15 +76,30 @@ export default function Contact() {
                 href={portfolioData.contact.resume}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-[#222222]/80 hover:text-[#222222] transition-colors group"
+                className="flex items-center gap-3 text-[#222222]/80 hover:text-[#222222] transition-colors duration-500 ease-fluid group"
               >
-                <div className="p-2 bg-[#7B7B7B]/20 rounded-xl group-hover:bg-[#7B7B7B]/30 transition-colors">
+                <div className="p-2 bg-[#7B7B7B]/20 rounded-xl group-hover:bg-[#7B7B7B]/30 transition-colors duration-500 ease-fluid">
                   <BsFileEarmarkText className="text-lg" />
                 </div>
                 <div>
                   <div className="font-medium">Resume</div>
+                  <div className="text-sm text-[#222222]/70">Download PDF</div>
+                </div>
+              </a>
+
+              <a
+                href="https://medium.com/@siddhantnitin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-[#222222]/80 hover:text-[#222222] transition-colors duration-500 ease-fluid group"
+              >
+                <div className="p-2 bg-[#7B7B7B]/20 rounded-xl group-hover:bg-[#7B7B7B]/30 transition-colors duration-500 ease-fluid">
+                  <BsMedium className="text-lg" />
+                </div>
+                <div>
+                  <div className="font-medium">Medium</div>
                   <div className="text-sm text-[#222222]/70">
-                    Download PDF
+                    medium.com/@siddhantnitin
                   </div>
                 </div>
               </a>

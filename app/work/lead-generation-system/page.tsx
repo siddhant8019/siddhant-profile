@@ -3,6 +3,7 @@
 import React from "react";
 import {
   BsArrowRight,
+  BsArrowDown,
   BsGithub,
   BsLinkedin,
   BsGlobe,
@@ -218,26 +219,28 @@ export default function LeadGenerationSystemPage() {
           System Architecture
         </h2>
 
-        <div className="space-y-6">
+        <div className="flex flex-col items-center">
           {architectureSteps.map((step, index) => (
-            <div key={index} className="flex items-center gap-6">
-              <div
-                className={`${step.color} text-[#FFFFFF] rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0`}
-              >
-                {step.step}
-              </div>
-              <div className="glass-card p-7 rounded-2xl flex-1">
-                <h3 className="text-xl font-semibold text-[#222222] mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-[#222222]/80">
-                  {step.description}
-                </p>
+            <React.Fragment key={index}>
+              <div className="flex items-center gap-6 w-full max-w-2xl">
+                <div
+                  className={`${step.color} text-[#FFFFFF] rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg flex-shrink-0`}
+                >
+                  {step.step}
+                </div>
+                <div className="glass-card p-7 rounded-2xl flex-1">
+                  <h3 className="text-xl font-semibold text-[#222222] mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-[#222222]/80">
+                    {step.description}
+                  </p>
+                </div>
               </div>
               {index < architectureSteps.length - 1 && (
-                <BsArrowRight className="text-[#222222]/50 w-6 h-6 flex-shrink-0" />
+                <BsArrowDown className="text-[#222222]/50 w-6 h-6 my-2" />
               )}
-            </div>
+            </React.Fragment>
           ))}
         </div>
       </div>
@@ -342,7 +345,7 @@ export default function LeadGenerationSystemPage() {
           </p>
           <Link
             href="/mail"
-            className="inline-flex items-center gap-2 btn-secondary px-8 py-4 rounded-full font-medium"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-[4px] font-medium bg-white text-[#1a1a1a] border border-white/20 hover:bg-white/95 transition-colors duration-500 ease-fluid"
           >
             Get in Touch
             <BsArrowRight className="w-5 h-5" />
