@@ -10,19 +10,11 @@ export default function Hero() {
   return (
     <section className="text-center px-4 py-8 sm:py-16 mb-16 sm:mb-28 relative">
       <div className="text-3xl sm:text-6xl gradient-text mb-4 font-medium">
-        {portfolioData.home.hero.name}
+        Hello!
       </div>
       <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-[#1a1a1a] leading-tight section-title">
-        {titleParts.length === 2 ? (
-          <>
-            {titleParts[0]}{" "}
-          <br />
-            <span className="underline">not</span>{" "}
-            {titleParts[1]}
-          </>
-        ) : (
-          title
-        )}
+        I'm Siddhant, an AI engineer building agentic AI systems that replace
+        manual work, not demo well and die later.
       </h1>
 
       <p className="text-base sm:text-lg md:text-2xl text-[#5c5c5c] mb-4 sm:mb-5 max-w-3xl mx-auto px-2 leading-relaxed">
