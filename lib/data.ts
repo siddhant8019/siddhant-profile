@@ -33,7 +33,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Co-Founder (AI Engineer)",
+    title: "Founding Engineer",
     company: "Teamcast.ai",
     dates: "May 2025 – Present",
     location: "Palo Alto, CA",
@@ -51,7 +51,7 @@ export const experiencesData = [
     icon: React.createElement(CgWorkAlt),
   },
   {
-    title: "Co-Founder",
+    title: "Founding Member",
     company: "humancloud",
     dates: "Aug 2023 – Present",
     location: "Palo Alto, CA",
@@ -338,9 +338,9 @@ export const portfolioData = {
     ],
     stats: [
       { label: "AI Products Shipped", value: "5+" },
-      { label: "Years Building AI Systems", value: "4+" },
+      { label: "Years Building AI Systems", value: "3+" },
       { label: "Technologies Mastered", value: "15+" },
-      { label: "Articles Written", value: "10+" },
+      { label: "Articles Written", value: "20+" },
     ],
   },
   personality: [
@@ -358,6 +358,34 @@ export const portfolioData = {
       "https://drive.google.com/file/d/1UOeLtTotuDFfFq7ul-hgXzf7DP1AB6UW/view?usp=sharing",
   },
   blog: [
+    {
+      title: "Google — Aletheia",
+      description:
+        "AI just crossed the line mathematicians thought was safe. What Google DeepMind's Aletheia research agent means for frontier mathematics — solving open PhD-level problems and why Terence Tao called AI his junior co-author.",
+      link: "https://blog.gopenai.com/google-aletheia-b728f7462db8",
+      date: "March 2026",
+    },
+    {
+      title: "The Car That Doesn't Need to Be Perfect",
+      description:
+        "Jensen Huang rode shotgun. The car drove itself. Why Nvidia's dual AV stack demo matters — and what happens when you run neural networks and rules-based systems simultaneously.",
+      link: "https://medium.com/@siddhantnitin/the-car-that-doesnt-need-to-be-perfect-4107ddaefbf6",
+      date: "March 2026",
+    },
+    {
+      title: "OpenClaw 3.7 + 3.8: The Agent OS Just Got Serious",
+      description:
+        "Context control, backup, topic routing, and the safety lesson everyone missed. What actually matters from the OpenClaw update.",
+      link: "https://medium.com/@siddhantnitin/openclaw-3-7-3-8-the-agent-os-update-720dca1deb98",
+      date: "March 2026",
+    },
+    {
+      title: "Google Turned Workspace Into an AI OS. It Isn't the Features.",
+      description:
+        "A benchmark-driven breakdown of Gemini's Workspace takeover — and why Gemini Embedding 2 is the move most people will completely miss.",
+      link: "https://medium.com/@siddhantnitin/google-turned-workspace-into-an-ai-os-it-isnt-the-features-5342507155d6",
+      date: "March 2026",
+    },
     {
       title: "Gemini 3 Deep Think",
       description:
